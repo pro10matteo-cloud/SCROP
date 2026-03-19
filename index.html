@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSCHITT — Spray Nasal Anti-Scroll TikTok</title>
+  <meta name="description" content="PSCHITT : le premier spray nasal anti-scroll TikTok. Un pschitt et t'es libre. Brigade 21 — THE GLITCH 2026.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ========================================
+       NAVIGATION
+       ======================================== -->
+  <nav class="navbar" id="navbar" aria-label="Navigation principale">
+    <div class="navbar__inner">
+      <a href="#hero" class="navbar__logo" aria-label="Retour en haut">
+        PSCHITT<span class="navbar__logo-dot">.</span>
+      </a>
+
+      <ul class="navbar__links" id="nav-links" role="list">
+        <li><a href="#probleme" class="navbar__link">Le Problème</a></li>
+        <li><a href="#solution" class="navbar__link">La Solution</a></li>
+        <li><a href="#gamme" class="navbar__link">La Gamme</a></li>
+        <li><a href="#cible" class="navbar__link">La Cible</a></li>
+        <li><a href="#benchmark" class="navbar__link">Le Marché</a></li>
+        <li><a href="#business" class="navbar__link">Business Plan</a></li>
+        <li><a href="#storytelling" class="navbar__link">Notre Histoire</a></li>
+        <li><a href="#equipe" class="navbar__link">L'Équipe</a></li>
+      </ul>
+
+      <button class="navbar__burger" id="burger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="navbar__burger-line"></span>
+        <span class="navbar__burger-line"></span>
+        <span class="navbar__burger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="#probleme" class="mobile-menu__link">Le Problème</a></li>
+      <li><a href="#solution" class="mobile-menu__link">La Solution</a></li>
+      <li><a href="#gamme" class="mobile-menu__link">La Gamme</a></li>
+      <li><a href="#cible" class="mobile-menu__link">La Cible</a></li>
+      <li><a href="#benchmark" class="mobile-menu__link">Le Marché</a></li>
+      <li><a href="#business" class="mobile-menu__link">Business Plan</a></li>
+      <li><a href="#storytelling" class="mobile-menu__link">Notre Histoire</a></li>
+      <li><a href="#equipe" class="mobile-menu__link">L'Équipe</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- ========================================
+         SECTION 1 — HERO
+         ======================================== -->
+    <section class="section section-hero" id="hero">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="hero__content">
+        <h1 class="hero__title" aria-label="PSCHITT">
+          <span class="hero__letter" data-index="0">P</span>
+          <span class="hero__letter" data-index="1">S</span>
+          <span class="hero__letter" data-index="2">C</span>
+          <span class="hero__letter" data-index="3">H</span>
+          <span class="hero__letter" data-index="4">I</span>
+          <span class="hero__letter" data-index="5">T</span>
+          <span class="hero__letter" data-index="6">T</span>
+        </h1>
+        <p class="hero__tagline">Un pschitt et t'es libre.</p>
+        <div class="hero__spray-visual">
+          <!-- TODO: Remplacer par le visuel/mockup du spray -->
+          <div class="hero__spray-placeholder">
+            <div class="hero__spray-icon">💨</div>
+            <span class="placeholder">[PLACEHOLDER : Visuel du spray PSCHITT]</span>
+          </div>
+        </div>
+        <a href="#probleme" class="hero__cta btn btn--primary">
+          Libère ton nez <span class="btn__icon">👃</span>
+        </a>
+      </div>
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span class="hero__scroll-text">Scroll pour comprendre</span>
+        <div class="hero__scroll-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 2 — LE PROBLÈME
+         ======================================== -->
+    <section class="section section-probleme" id="probleme">
+      <div class="section__inner">
+        <span class="section__label">01 — Le Problème</span>
+        <h2 class="section__title section__title--glitch" data-text="Houston, on a un problème de pouce.">
+          Houston, on a un problème de pouce.
+        </h2>
+        <p class="section__subtitle">
+          Ton cerveau est hacké. Et le dealer, c'est dans ta poche.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card" data-animate="fade-up">
+            <span class="stat-card__number" data-count="4.7">0</span>
+            <span class="stat-card__unit">heures/jour</span>
+            <p class="stat-card__label">
+              <!-- TODO: Vérifier la stat exacte et la source -->
+              <span class="placeholder">[PLACEHOLDER : Temps d'écran moyen des 13-18 ans — source à trouver]</span>
+            </p>
+          </div>
+          <div class="stat-card" data-animate="fade-up" data-delay="0.1">
+            <span class="stat-card__number" data-count="67">0</span>
+            <span class="stat-card__unit">%</span>
+            <p class="stat-card__label">
+              <span class="placeholder">[PLACEHOLDER : % d'ados se disant "accros" à TikTok — source à trouver]</span>
+            </p>
+          </div>
+          <div class="stat-card" data-animate="fade-up" data-delay="0.2">
+            <span class="stat-card__number" data-count="300">0</span>
+            <span class="stat-card__unit">scrolls/jour</span>
+            <p class="stat-card__label">
+              <span class="placeholder">[PLACEHOLDER : Nombre moyen de scrolls quotidiens — source à trouver]</span>
+            </p>
+          </div>
+          <div class="stat-card" data-animate="fade-up" data-delay="0.3">
+            <span class="stat-card__number" data-count="95">0</span>
+            <span class="stat-card__unit">minutes</span>
+            <p class="stat-card__label">
+              <span class="placeholder">[PLACEHOLDER : Durée moyenne d'une session TikTok — source à trouver]</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="probleme__explainer" data-animate="fade-up">
+          <div class="probleme__visual">
+            <!-- TODO: Illustration téléphone/cerveau/zombie -->
+            <div class="visual-placeholder">
+              <span class="placeholder">[PLACEHOLDER : Illustration — cerveau zombifié par le scroll]</span>
+            </div>
+          </div>
+          <div class="probleme__text">
+            <p>
+              <!-- TODO: Texte définitif sur le mécanisme dopamine/scroll -->
+              <span class="placeholder">[PLACEHOLDER : Texte explicatif sur le mécanisme de la dopamine et l'addiction au scroll. Comment TikTok pirate ton cerveau avec des micro-doses de dopamine à chaque swipe. Le scroll infini comme machine à sous neurologique. 3-4 phrases percutantes.]</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 3 — LA SOLUTION / LE PRODUIT
+         ======================================== -->
+    <section class="section section-solution" id="solution">
+      <div class="section__inner">
+        <span class="section__label">02 — La Solution</span>
+        <h2 class="section__title">
+          La science a parlé.<sup class="asterisk">*</sup>
+        </h2>
+        <p class="section__subtitle">
+          PSCHITT : le premier spray nasal anti-scroll au monde.
+        </p>
+
+        <div class="steps-grid">
+          <div class="step-card" data-animate="fade-up" data-delay="0">
+            <div class="step-card__number">01</div>
+            <div class="step-card__icon">
+              <!-- TODO: Icône personnalisée -->
+              <span class="step-card__emoji">🔓</span>
+            </div>
+            <h3 class="step-card__title">Ouvre le capuchon</h3>
+            <p class="step-card__desc">Comme un pro. T'as déjà fait ça.</p>
+          </div>
+          <div class="step-card" data-animate="fade-up" data-delay="0.1">
+            <div class="step-card__number">02</div>
+            <div class="step-card__icon">
+              <span class="step-card__emoji">👃</span>
+            </div>
+            <h3 class="step-card__title">Vise la narine</h3>
+            <p class="step-card__desc">Gauche ou droite, on juge pas.</p>
+          </div>
+          <div class="step-card" data-animate="fade-up" data-delay="0.2">
+            <div class="step-card__number">03</div>
+            <div class="step-card__icon">
+              <span class="step-card__emoji">💨</span>
+            </div>
+            <h3 class="step-card__title">Pschitt.</h3>
+            <p class="step-card__desc">Un seul suffit. Deux si t'es sur Reels aussi.</p>
+          </div>
+          <div class="step-card" data-animate="fade-up" data-delay="0.3">
+            <div class="step-card__number">04</div>
+            <div class="step-card__icon">
+              <span class="step-card__emoji">📵</span>
+            </div>
+            <h3 class="step-card__title">Pose ton tel.</h3>
+            <p class="step-card__desc">Et redécouvre le monde réel. Il est bizarre mais il est là.</p>
+          </div>
+        </div>
+
+        <div class="formula" data-animate="fade-up">
+          <h3 class="formula__title">La Formule Secrète™</h3>
+          <div class="formula__grid">
+            <div class="formula__ingredient">
+              <span class="formula__ingredient-name">
+                <!-- TODO: Nom d'ingrédient absurde -->
+                <span class="placeholder">[PLACEHOLDER : Nom ingrédient 1 — ex: "Extractum Focusium"]</span>
+              </span>
+              <p class="formula__ingredient-desc">
+                <span class="placeholder">[PLACEHOLDER : Description pseudo-scientifique absurde de l'ingrédient 1]</span>
+              </p>
+            </div>
+            <div class="formula__ingredient">
+              <span class="formula__ingredient-name">
+                <span class="placeholder">[PLACEHOLDER : Nom ingrédient 2 — ex: "Dopamine B-Gone™"]</span>
+              </span>
+              <p class="formula__ingredient-desc">
+                <span class="placeholder">[PLACEHOLDER : Description pseudo-scientifique absurde de l'ingrédient 2]</span>
+              </p>
+            </div>
+            <div class="formula__ingredient">
+              <span class="formula__ingredient-name">
+                <span class="placeholder">[PLACEHOLDER : Nom ingrédient 3 — ex: "Concentré de Touche-de-l'herbe"]</span>
+              </span>
+              <p class="formula__ingredient-desc">
+                <span class="placeholder">[PLACEHOLDER : Description pseudo-scientifique absurde de l'ingrédient 3]</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="disclaimer">
+          <sup>*</sup>Aucune étude scientifique n'a été maltraitée pendant la création de ce produit. Les résultats peuvent varier selon votre niveau d'addiction et votre capacité à résister aux notifications.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 4 — LA GAMME
+         ======================================== -->
+    <section class="section section-gamme" id="gamme">
+      <div class="section__inner">
+        <span class="section__label">03 — La Gamme</span>
+        <h2 class="section__title">Trouve ton PSCHITT.</h2>
+        <p class="section__subtitle">
+          Un spray pour chaque niveau d'addiction. Parce que le scroll, c'est pas une maladie unique.
+        </p>
+
+        <div class="products-grid">
+          <!-- Produit 1 — Original -->
+          <div class="product-card" data-animate="fade-up" data-delay="0">
+            <div class="product-card__badge">Bestseller</div>
+            <div class="product-card__visual">
+              <!-- TODO: Visuel produit -->
+              <div class="visual-placeholder visual-placeholder--product">
+                <span class="placeholder">[PLACEHOLDER : Visuel PSCHITT Original]</span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">PSCHITT Original</h3>
+              <p class="product-card__desc">Le classique. Pour le scrolleur du dimanche qui commence à déraper en semaine.</p>
+              <div class="product-card__price">
+                <!-- TODO: Prix définitif -->
+                <span class="placeholder">[PLACEHOLDER : Prix — ex: 14,99€]</span>
+              </div>
+              <button class="btn btn--secondary product-card__btn" aria-label="Ajouter PSCHITT Original au panier">
+                Ajouter au panier 🛒
+              </button>
+            </div>
+          </div>
+
+          <!-- Produit 2 — Extreme -->
+          <div class="product-card" data-animate="fade-up" data-delay="0.1">
+            <div class="product-card__badge product-card__badge--hot">🔥 Intense</div>
+            <div class="product-card__visual">
+              <div class="visual-placeholder visual-placeholder--product">
+                <span class="placeholder">[PLACEHOLDER : Visuel PSCHITT Extreme]</span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">PSCHITT Extreme</h3>
+              <p class="product-card__desc">Pour les cas sévères. Tu scrolles aux toilettes, dans le métro, pendant les repas. On te juge pas. On te soigne.</p>
+              <div class="product-card__price">
+                <span class="placeholder">[PLACEHOLDER : Prix — ex: 19,99€]</span>
+              </div>
+              <button class="btn btn--secondary product-card__btn" aria-label="Ajouter PSCHITT Extreme au panier">
+                Ajouter au panier 🛒
+              </button>
+            </div>
+          </div>
+
+          <!-- Produit 3 — Kids -->
+          <div class="product-card" data-animate="fade-up" data-delay="0.2">
+            <div class="product-card__badge product-card__badge--kids">👶 Adapté</div>
+            <div class="product-card__visual">
+              <div class="visual-placeholder visual-placeholder--product">
+                <span class="placeholder">[PLACEHOLDER : Visuel PSCHITT Kids]</span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">PSCHITT Kids</h3>
+              <p class="product-card__desc">Formule douce pour les moins de 12 ans. Parce que oui, ils scrollent déjà. Et oui, c'est flippant.</p>
+              <div class="product-card__price">
+                <span class="placeholder">[PLACEHOLDER : Prix — ex: 12,99€]</span>
+              </div>
+              <button class="btn btn--secondary product-card__btn" aria-label="Ajouter PSCHITT Kids au panier">
+                Ajouter au panier 🛒
+              </button>
+            </div>
+          </div>
+
+          <!-- Produit 4 — Night -->
+          <div class="product-card" data-animate="fade-up" data-delay="0.3">
+            <div class="product-card__badge product-card__badge--night">🌙 Nocturne</div>
+            <div class="product-card__visual">
+              <div class="visual-placeholder visual-placeholder--product">
+                <span class="placeholder">[PLACEHOLDER : Visuel PSCHITT Night]</span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">PSCHITT Night</h3>
+              <p class="product-card__desc">Spécial doomscrolling nocturne. Il est 3h du mat', t'as cours demain, et tu regardes un type cuire un steak sur un volcan.</p>
+              <div class="product-card__price">
+                <span class="placeholder">[PLACEHOLDER : Prix — ex: 17,99€]</span>
+              </div>
+              <button class="btn btn--secondary product-card__btn" aria-label="Ajouter PSCHITT Night au panier">
+                Ajouter au panier 🛒
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 5 — LA CIBLE / PERSONAS
+         ======================================== -->
+    <section class="section section-cible" id="cible">
+      <div class="section__inner">
+        <span class="section__label">04 — La Cible</span>
+        <h2 class="section__title">On les connaît par cœur.</h2>
+        <p class="section__subtitle">
+          Nos utilisateurs, on les a étudiés. Observés. Compris. (Et un peu stalkés, mais pour la science.)
+        </p>
+
+        <div class="personas-grid">
+          <!-- Persona 1 — L'ado -->
+          <div class="persona-card" data-animate="fade-up">
+            <div class="persona-card__header">
+              <div class="persona-card__avatar">
+                <!-- TODO: Photo/avatar persona -->
+                <div class="avatar-placeholder">🧑‍💻</div>
+              </div>
+              <div class="persona-card__identity">
+                <h3 class="persona-card__name">
+                  <span class="placeholder">[PLACEHOLDER : Prénom de l'ado — ex: "Léo"]</span>
+                </h3>
+                <span class="persona-card__age">
+                  <span class="placeholder">[PLACEHOLDER : Âge — ex: "16 ans"]</span>
+                </span>
+                <span class="persona-card__type">Persona principal — L'ado</span>
+              </div>
+            </div>
+            <blockquote class="persona-card__quote">
+              <!-- TODO: Citation du persona -->
+              <span class="placeholder">"[PLACEHOLDER : Citation de l'ado — ex: 'Je voulais juste regarder une vidéo. C'était il y a 3 heures.']"</span>
+            </blockquote>
+            <div class="persona-card__details">
+              <div class="persona-card__detail">
+                <h4>📱 Habitudes digitales</h4>
+                <p><span class="placeholder">[PLACEHOLDER : Habitudes — ex: 5h/jour sur TikTok, 200+ vidéos, scroll compulsif avant de dormir]</span></p>
+              </div>
+              <div class="persona-card__detail">
+                <h4>😤 Frustrations</h4>
+                <p><span class="placeholder">[PLACEHOLDER : Frustrations — ex: "Je perds du temps", "Je sais que c'est mal mais j'arrive pas à m'arrêter"]</span></p>
+              </div>
+              <div class="persona-card__detail">
+                <h4>✨ Ce que PSCHITT change</h4>
+                <p><span class="placeholder">[PLACEHOLDER : Bénéfices — ex: Reprend le contrôle, retrouve du temps, dort mieux]</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Persona 2 — Le parent -->
+          <div class="persona-card persona-card--parent" data-animate="fade-up" data-delay="0.2">
+            <div class="persona-card__header">
+              <div class="persona-card__avatar">
+                <div class="avatar-placeholder">👨‍👩‍👧</div>
+              </div>
+              <div class="persona-card__identity">
+                <h3 class="persona-card__name">
+                  <span class="placeholder">[PLACEHOLDER : Prénom du parent — ex: "Sophie"]</span>
+                </h3>
+                <span class="persona-card__age">
+                  <span class="placeholder">[PLACEHOLDER : Âge — ex: "44 ans"]</span>
+                </span>
+                <span class="persona-card__type">Persona secondaire — Le parent</span>
+              </div>
+            </div>
+            <blockquote class="persona-card__quote">
+              <span class="placeholder">"[PLACEHOLDER : Citation du parent — ex: 'J'ai essayé le contrôle parental. Il a contourné ça en 10 minutes.']"</span>
+            </blockquote>
+            <div class="persona-card__details">
+              <div class="persona-card__detail">
+                <h4>😰 Préoccupations</h4>
+                <p><span class="placeholder">[PLACEHOLDER : Préoccupations — ex: temps d'écran de son enfant, impact sur le sommeil et les notes]</span></p>
+              </div>
+              <div class="persona-card__detail">
+                <h4>🚫 Solutions testées (qui n'ont pas marché)</h4>
+                <p><span class="placeholder">[PLACEHOLDER : ex: contrôle parental, confiscation du téléphone, discussions]</span></p>
+              </div>
+              <div class="persona-card__detail">
+                <h4>✨ Ce que PSCHITT change</h4>
+                <p><span class="placeholder">[PLACEHOLDER : Bénéfices — ex: Solution non-conflictuelle, l'enfant gère lui-même]</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 6 — BENCHMARK / LE MARCHÉ
+         ======================================== -->
+    <section class="section section-benchmark" id="benchmark">
+      <div class="section__inner">
+        <span class="section__label">05 — Le Marché</span>
+        <h2 class="section__title">Pourquoi PSCHITT &gt; le reste.</h2>
+        <p class="section__subtitle">
+          On a regardé ce qui existe. Spoiler : rien ne nous arrive à la narine.
+        </p>
+
+        <div class="benchmark-table" data-animate="fade-up">
+          <div class="benchmark-table__header">
+            <div class="benchmark-table__cell benchmark-table__cell--criteria">Critère</div>
+            <div class="benchmark-table__cell benchmark-table__cell--pschitt">PSCHITT 💛</div>
+            <div class="benchmark-table__cell">
+              <span class="placeholder">[Concurrent 1]</span>
+            </div>
+            <div class="benchmark-table__cell">
+              <span class="placeholder">[Concurrent 2]</span>
+            </div>
+            <div class="benchmark-table__cell">
+              <span class="placeholder">[Concurrent 3]</span>
+            </div>
+          </div>
+
+          <div class="benchmark-table__row" data-animate="fade-up" data-delay="0.05">
+            <div class="benchmark-table__cell benchmark-table__cell--criteria">Efficacité</div>
+            <div class="benchmark-table__cell benchmark-table__cell--pschitt">
+              <div class="benchmark-bar" data-value="95"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="40"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="55"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="30"></div>
+            </div>
+          </div>
+
+          <div class="benchmark-table__row" data-animate="fade-up" data-delay="0.1">
+            <div class="benchmark-table__cell benchmark-table__cell--criteria">Prix accessible</div>
+            <div class="benchmark-table__cell benchmark-table__cell--pschitt">
+              <div class="benchmark-bar" data-value="85"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="60"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="45"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="70"></div>
+            </div>
+          </div>
+
+          <div class="benchmark-table__row" data-animate="fade-up" data-delay="0.15">
+            <div class="benchmark-table__cell benchmark-table__cell--criteria">Facilité d'usage</div>
+            <div class="benchmark-table__cell benchmark-table__cell--pschitt">
+              <div class="benchmark-bar" data-value="100"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="50"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="65"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="35"></div>
+            </div>
+          </div>
+
+          <div class="benchmark-table__row" data-animate="fade-up" data-delay="0.2">
+            <div class="benchmark-table__cell benchmark-table__cell--criteria">Fun Factor</div>
+            <div class="benchmark-table__cell benchmark-table__cell--pschitt">
+              <div class="benchmark-bar" data-value="100"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="10"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="25"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="15"></div>
+            </div>
+          </div>
+
+          <div class="benchmark-table__row" data-animate="fade-up" data-delay="0.25">
+            <div class="benchmark-table__cell benchmark-table__cell--criteria">Innovation</div>
+            <div class="benchmark-table__cell benchmark-table__cell--pschitt">
+              <div class="benchmark-bar" data-value="100"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="30"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="50"></div>
+            </div>
+            <div class="benchmark-table__cell">
+              <div class="benchmark-bar" data-value="20"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="benchmark__opportunity" data-animate="fade-up">
+          <h3>L'opportunité de marché</h3>
+          <p>
+            <span class="placeholder">[PLACEHOLDER : Texte sur l'opportunité de marché — taille du marché du bien-être digital, croissance, besoin non adressé, positionnement unique de PSCHITT]</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 7 — BUSINESS PLAN
+         ======================================== -->
+    <section class="section section-business" id="business">
+      <div class="section__inner">
+        <span class="section__label">06 — Business Plan</span>
+        <h2 class="section__title">L'absurde, ça scale.</h2>
+        <p class="section__subtitle">
+          Derrière le délire, y'a des vrais chiffres. Et ils sont beaux.
+        </p>
+
+        <!-- Modèle économique -->
+        <div class="business__model" data-animate="fade-up">
+          <h3 class="business__section-title">Modèle économique</h3>
+          <p>
+            <span class="placeholder">[PLACEHOLDER : Description du modèle économique — D2C (Direct-to-Consumer) en ligne + retail en pharmacies/concept stores. Abonnement mensuel "PSCHITT Club" pour les cas chroniques. Éditions limitées saisonnières.]</span>
+          </p>
+        </div>
+
+        <!-- KPIs -->
+        <div class="business__kpis" data-animate="fade-up">
+          <div class="kpi-card">
+            <span class="kpi-card__label">TAM</span>
+            <span class="kpi-card__value">
+              <span class="placeholder">[PLACEHOLDER]</span>
+            </span>
+            <span class="kpi-card__desc">Total Addressable Market</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-card__label">SAM</span>
+            <span class="kpi-card__value">
+              <span class="placeholder">[PLACEHOLDER]</span>
+            </span>
+            <span class="kpi-card__desc">Serviceable Addressable Market</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-card__label">SOM</span>
+            <span class="kpi-card__value">
+              <span class="placeholder">[PLACEHOLDER]</span>
+            </span>
+            <span class="kpi-card__desc">Serviceable Obtainable Market</span>
+          </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="business__pricing" data-animate="fade-up">
+          <h3 class="business__section-title">Pricing</h3>
+          <div class="pricing-table">
+            <div class="pricing-card">
+              <h4 class="pricing-card__name">Original</h4>
+              <span class="pricing-card__price"><span class="placeholder">[XX€]</span></span>
+              <ul class="pricing-card__features">
+                <li>1 spray (30 doses)</li>
+                <li>Formule classique</li>
+                <li>Notice en langage ado</li>
+              </ul>
+            </div>
+            <div class="pricing-card pricing-card--featured">
+              <div class="pricing-card__badge">Populaire</div>
+              <h4 class="pricing-card__name">Extreme</h4>
+              <span class="pricing-card__price"><span class="placeholder">[XX€]</span></span>
+              <ul class="pricing-card__features">
+                <li>1 spray (30 doses)</li>
+                <li>Formule renforcée</li>
+                <li>Sticker "J'ai survécu"</li>
+                <li>Accès au PSCHITT Club</li>
+              </ul>
+            </div>
+            <div class="pricing-card">
+              <h4 class="pricing-card__name">Pack Famille</h4>
+              <span class="pricing-card__price"><span class="placeholder">[XX€]</span></span>
+              <ul class="pricing-card__features">
+                <li>3 sprays au choix</li>
+                <li>-20% sur le lot</li>
+                <li>Guide "Parler scroll avec son ado"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prévisionnel 3 ans -->
+        <div class="business__forecast" data-animate="fade-up">
+          <h3 class="business__section-title">Prévisionnel 3 ans</h3>
+          <div class="forecast-chart">
+            <div class="forecast-bar" data-year="Année 1" data-animate="grow">
+              <div class="forecast-bar__fill" data-height="30">
+                <span class="forecast-bar__value">
+                  <span class="placeholder">[PLACEHOLDER : CA Année 1]</span>
+                </span>
+              </div>
+              <span class="forecast-bar__label">Année 1<br><small>Lancement</small></span>
+            </div>
+            <div class="forecast-bar" data-year="Année 2" data-animate="grow">
+              <div class="forecast-bar__fill" data-height="60">
+                <span class="forecast-bar__value">
+                  <span class="placeholder">[PLACEHOLDER : CA Année 2]</span>
+                </span>
+              </div>
+              <span class="forecast-bar__label">Année 2<br><small>Croissance</small></span>
+            </div>
+            <div class="forecast-bar" data-year="Année 3" data-animate="grow">
+              <div class="forecast-bar__fill" data-height="100">
+                <span class="forecast-bar__value">
+                  <span class="placeholder">[PLACEHOLDER : CA Année 3]</span>
+                </span>
+              </div>
+              <span class="forecast-bar__label">Année 3<br><small>Domination</small></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline de lancement -->
+        <div class="business__timeline" data-animate="fade-up">
+          <h3 class="business__section-title">Stratégie de lancement</h3>
+          <div class="timeline">
+            <div class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <h4>Phase 1</h4>
+                <p><span class="placeholder">[PLACEHOLDER : Phase 1 — ex: Buzz TikTok + pré-commandes, T1 2027]</span></p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <h4>Phase 2</h4>
+                <p><span class="placeholder">[PLACEHOLDER : Phase 2 — ex: Lancement D2C + influenceurs, T2 2027]</span></p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <h4>Phase 3</h4>
+                <p><span class="placeholder">[PLACEHOLDER : Phase 3 — ex: Retail + international, T4 2027]</span></p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <h4>Phase 4</h4>
+                <p><span class="placeholder">[PLACEHOLDER : Phase 4 — ex: Gamme étendue + PSCHITT Club, 2028]</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 8 — STORYTELLING
+         ======================================== -->
+    <section class="section section-storytelling" id="storytelling">
+      <div class="section__inner section__inner--narrow">
+        <span class="section__label">07 — Notre Histoire</span>
+        <h2 class="section__title">Comment tout a commencé.</h2>
+
+        <div class="story" data-animate="fade-up">
+          <div class="story__chapter">
+            <p class="story__text story__text--lead">
+              <span class="placeholder">[PLACEHOLDER : Accroche du récit fondateur — ex: "Tout a commencé dans une salle de classe. Un prof parlait. Personne n'écoutait. 27 pouces glissaient en silence sur 27 écrans."]</span>
+            </p>
+          </div>
+
+          <div class="story__chapter" data-animate="fade-up">
+            <p class="story__text">
+              <span class="placeholder">[PLACEHOLDER : Suite du récit — le moment de révélation, l'idée absurde qui surgit, la réaction du groupe]</span>
+            </p>
+          </div>
+
+          <blockquote class="story__pullquote" data-animate="fade-up">
+            <p>
+              <span class="placeholder">"[PLACEHOLDER : Citation fondatrice — ex: 'Et si la solution, c'était pas dans le téléphone... mais dans le nez ?']"</span>
+            </p>
+          </blockquote>
+
+          <div class="story__chapter" data-animate="fade-up">
+            <p class="story__text">
+              <span class="placeholder">[PLACEHOLDER : La suite — comment l'idée est devenue un projet, le travail de la Brigade 21, la vision]</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="manifeste" data-animate="fade-up">
+          <h3 class="manifeste__title">Le Manifeste PSCHITT</h3>
+          <ol class="manifeste__list">
+            <li class="manifeste__item" data-animate="fade-up">
+              <span class="placeholder">[PLACEHOLDER : Principe 1 du manifeste]</span>
+            </li>
+            <li class="manifeste__item" data-animate="fade-up" data-delay="0.1">
+              <span class="placeholder">[PLACEHOLDER : Principe 2 du manifeste]</span>
+            </li>
+            <li class="manifeste__item" data-animate="fade-up" data-delay="0.2">
+              <span class="placeholder">[PLACEHOLDER : Principe 3 du manifeste]</span>
+            </li>
+            <li class="manifeste__item" data-animate="fade-up" data-delay="0.3">
+              <span class="placeholder">[PLACEHOLDER : Principe 4 du manifeste]</span>
+            </li>
+            <li class="manifeste__item" data-animate="fade-up" data-delay="0.4">
+              <span class="placeholder">[PLACEHOLDER : Principe 5 du manifeste]</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 9 — L'ÉQUIPE / BRIGADE 21
+         ======================================== -->
+    <section class="section section-equipe" id="equipe">
+      <div class="section__inner">
+        <span class="section__label">08 — L'Équipe</span>
+        <h2 class="section__title">Les cerveaux derrière le PSCHITT.</h2>
+        <p class="section__subtitle">
+          Brigade 21. Agents du désordre. Architectes de l'absurde.
+        </p>
+
+        <div class="team-grid">
+          <!-- TODO: Ajouter les vrais membres de l'équipe -->
+          <div class="team-card" data-animate="fade-up" data-delay="0">
+            <div class="team-card__photo">
+              <div class="avatar-placeholder avatar-placeholder--team">👤</div>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name"><span class="placeholder">[PLACEHOLDER : Nom Membre 1]</span></h3>
+              <span class="team-card__role"><span class="placeholder">[PLACEHOLDER : Rôle]</span></span>
+              <p class="team-card__fact"><span class="placeholder">[PLACEHOLDER : Fun fact]</span></p>
+            </div>
+            <div class="team-card__stamp">BRIGADE 21</div>
+          </div>
+
+          <div class="team-card" data-animate="fade-up" data-delay="0.1">
+            <div class="team-card__photo">
+              <div class="avatar-placeholder avatar-placeholder--team">👤</div>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name"><span class="placeholder">[PLACEHOLDER : Nom Membre 2]</span></h3>
+              <span class="team-card__role"><span class="placeholder">[PLACEHOLDER : Rôle]</span></span>
+              <p class="team-card__fact"><span class="placeholder">[PLACEHOLDER : Fun fact]</span></p>
+            </div>
+            <div class="team-card__stamp">BRIGADE 21</div>
+          </div>
+
+          <div class="team-card" data-animate="fade-up" data-delay="0.2">
+            <div class="team-card__photo">
+              <div class="avatar-placeholder avatar-placeholder--team">👤</div>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name"><span class="placeholder">[PLACEHOLDER : Nom Membre 3]</span></h3>
+              <span class="team-card__role"><span class="placeholder">[PLACEHOLDER : Rôle]</span></span>
+              <p class="team-card__fact"><span class="placeholder">[PLACEHOLDER : Fun fact]</span></p>
+            </div>
+            <div class="team-card__stamp">BRIGADE 21</div>
+          </div>
+
+          <div class="team-card" data-animate="fade-up" data-delay="0.3">
+            <div class="team-card__photo">
+              <div class="avatar-placeholder avatar-placeholder--team">👤</div>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name"><span class="placeholder">[PLACEHOLDER : Nom Membre 4]</span></h3>
+              <span class="team-card__role"><span class="placeholder">[PLACEHOLDER : Rôle]</span></span>
+              <p class="team-card__fact"><span class="placeholder">[PLACEHOLDER : Fun fact]</span></p>
+            </div>
+            <div class="team-card__stamp">BRIGADE 21</div>
+          </div>
+
+          <div class="team-card" data-animate="fade-up" data-delay="0.4">
+            <div class="team-card__photo">
+              <div class="avatar-placeholder avatar-placeholder--team">👤</div>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name"><span class="placeholder">[PLACEHOLDER : Nom Membre 5]</span></h3>
+              <span class="team-card__role"><span class="placeholder">[PLACEHOLDER : Rôle]</span></span>
+              <p class="team-card__fact"><span class="placeholder">[PLACEHOLDER : Fun fact]</span></p>
+            </div>
+            <div class="team-card__stamp">BRIGADE 21</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================
+       SECTION 10 — FOOTER
+       ======================================== -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">PSCHITT<span class="footer__logo-dot">.</span></span>
+        <p class="footer__tagline">Un pschitt et t'es libre.</p>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__links-title">Suivez le délire</h4>
+        <div class="footer__social">
+          <!-- Faux liens réseaux sociaux -->
+          <a href="#" class="footer__social-link" aria-label="Instagram" onclick="return false;">
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="TikTok (ironique)" onclick="return false;">
+            <span>TikTok (oui, ironique)</span>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="X / Twitter" onclick="return false;">
+            <span>X (ex-Twitter)</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__credits">
+        <p class="footer__hackathon">
+          THE GLITCH — ISEFAC TALKS 2026
+        </p>
+        <p class="footer__team">
+          Brigade 21 — ISEFAC Lille
+        </p>
+        <p class="footer__disclaimer">
+          Aucun nez n'a été maltraité pendant la création de ce site. Sauf peut-être celui de Kevin.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 PSCHITT — Un produit 100% fictif, 100% génial.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
