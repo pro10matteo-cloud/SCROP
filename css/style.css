@@ -2519,6 +2519,23 @@ sup {
   background: var(--color-gray-light);
 }
 
+/* Hero CSS animations — indépendant de GSAP */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-anim {
+  opacity: 0;
+  animation: heroFadeUp 0.7s ease forwards;
+}
+.hero-anim--1 { animation-delay: 0.1s; }
+.hero-anim--2 { animation-delay: 0.25s; }
+.hero-anim--3 { animation-delay: 0.4s; }
+.hero-anim--4 { animation-delay: 0.55s; }
+.hero-anim--5 { animation-delay: 0.7s; }
+.hero-anim--6 { animation-delay: 0.85s; }
+
 /* Navbar hero logo sur fond blanc */
 .section-hero__top {
   display: flex;
