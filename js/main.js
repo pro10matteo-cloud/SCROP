@@ -214,21 +214,27 @@ function initScrollAnimations() {
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Fade-up elements
-    document.querySelectorAll('[data-animate="fade-up"]').forEach(el => {
-      const delay = parseFloat(el.dataset.delay) || 0;
+    // Hero title — no ScrollTrigger, animates immediately on load
+    document.querySelectorAll('[data-animate="hero-title"]').forEach(el => {
       gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
-        y: 40, opacity: 0, duration: 0.8, delay: delay, ease: 'power2.out',
+        y: 50, scale: 0.95, opacity: 0, duration: 1, delay: 0.2, ease: 'power2.out',
         onComplete: () => el.classList.add('gsap-animated')
       });
     });
 
-    // Hero title
-    document.querySelectorAll('[data-animate="hero-title"]').forEach(el => {
+    // Hero fade-up elements — staggered, no ScrollTrigger
+    const heroFadeEls = document.querySelectorAll('.section-hero [data-animate="fade-up"]');
+    gsap.from(heroFadeEls, {
+      y: 30, opacity: 0, duration: 0.7, stagger: 0.12, delay: 0.5, ease: 'power2.out'
+    });
+
+    // All other fade-up elements with ScrollTrigger
+    document.querySelectorAll('[data-animate="fade-up"]').forEach(el => {
+      if (el.closest('.section-hero')) return; // skip hero (already handled)
+      const delay = parseFloat(el.dataset.delay) || 0;
       gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%' },
-        y: 50, scale: 0.95, opacity: 0, duration: 1, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        y: 40, opacity: 0, duration: 0.8, delay: delay, ease: 'power2.out',
         onComplete: () => el.classList.add('gsap-animated')
       });
     });
