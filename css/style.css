@@ -71,7 +71,7 @@
 /* ---- BASE STYLES ---- */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--nav-height);
+  scroll-padding-top: calc(var(--nav-height) + var(--space-2xl));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

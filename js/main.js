@@ -124,8 +124,10 @@ function initSmoothScroll() {
       const target = document.querySelector(anchor.getAttribute('href'));
       if (target) {
         const navHeight = document.getElementById('navbar').offsetHeight;
-        const targetPos = target.offsetTop - navHeight;
-        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+        const sectionPad = parseInt(window.getComputedStyle(target).paddingTop) || 0;
+        // On scrolle jusqu'au début du contenu (après le padding), moins 24px de respiration
+        const targetPos = target.offsetTop + sectionPad - navHeight - 24;
+        window.scrollTo({ top: Math.max(0, targetPos), behavior: 'smooth' });
       }
     });
   });
