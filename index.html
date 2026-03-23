@@ -1,882 +1,960 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PSCHITT — Spray Nasal Anti-Scroll TikTok</title>
-  <meta name="description" content="PSCHITT : le premier spray nasal anti-scroll TikTok. Un pschitt et t'es libre. Brigade 21 — THE GLITCH 2026.">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- GSAP + ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCROP® — Laboratoires Oscorpe | Spray nasal anti-scroll</title>
+    <meta name="description" content="SCROP® par les Laboratoires Oscorpe. Spray nasal anti-scroll à base de NöScroll™. Dispositif de libération attentionnelle.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ========================================
-       NAVIGATION
-       ======================================== -->
-  <nav class="navbar" id="navbar" aria-label="Navigation principale">
-    <div class="navbar__inner">
-      <a href="#hero" class="navbar__logo" aria-label="Retour en haut">
-        PSCHITT<span class="navbar__logo-dot">.</span>
-      </a>
-
-      <ul class="navbar__links" id="nav-links" role="list">
-        <li><a href="#probleme" class="navbar__link">Le Problème</a></li>
-        <li><a href="#solution" class="navbar__link">La Solution</a></li>
-        <li><a href="#gamme" class="navbar__link">La Gamme</a></li>
-        <li><a href="#cible" class="navbar__link">La Cible</a></li>
-        <li><a href="#benchmark" class="navbar__link">Le Marché</a></li>
-        <li><a href="#business" class="navbar__link">Business Plan</a></li>
-        <li><a href="#storytelling" class="navbar__link">Notre Histoire</a></li>
-        <li><a href="#equipe" class="navbar__link">L'Équipe</a></li>
-      </ul>
-
-      <button class="navbar__burger" id="burger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span class="navbar__burger-line"></span>
-        <span class="navbar__burger-line"></span>
-        <span class="navbar__burger-line"></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile menu overlay -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <ul class="mobile-menu__links" role="list">
-      <li><a href="#probleme" class="mobile-menu__link">Le Problème</a></li>
-      <li><a href="#solution" class="mobile-menu__link">La Solution</a></li>
-      <li><a href="#gamme" class="mobile-menu__link">La Gamme</a></li>
-      <li><a href="#cible" class="mobile-menu__link">La Cible</a></li>
-      <li><a href="#benchmark" class="mobile-menu__link">Le Marché</a></li>
-      <li><a href="#business" class="mobile-menu__link">Business Plan</a></li>
-      <li><a href="#storytelling" class="mobile-menu__link">Notre Histoire</a></li>
-      <li><a href="#equipe" class="mobile-menu__link">L'Équipe</a></li>
-    </ul>
-  </div>
-
-  <main>
-
-    <!-- ========================================
-         SECTION 1 — HERO
-         ======================================== -->
-    <section class="section section-hero" id="hero">
-      <div class="hero__bg-grid" aria-hidden="true"></div>
-      <div class="hero__content">
-        <h1 class="hero__title" aria-label="PSCHITT">
-          <span class="hero__letter" data-index="0">P</span>
-          <span class="hero__letter" data-index="1">S</span>
-          <span class="hero__letter" data-index="2">C</span>
-          <span class="hero__letter" data-index="3">H</span>
-          <span class="hero__letter" data-index="4">I</span>
-          <span class="hero__letter" data-index="5">T</span>
-          <span class="hero__letter" data-index="6">T</span>
-        </h1>
-        <p class="hero__tagline">Un pschitt et t'es libre.</p>
-        <div class="hero__spray-visual">
-          <!-- TODO: Remplacer par le visuel/mockup du spray -->
-          <div class="hero__spray-placeholder">
-            <div class="hero__spray-icon">💨</div>
-            <span class="placeholder">[PLACEHOLDER : Visuel du spray PSCHITT]</span>
-          </div>
-        </div>
-        <a href="#probleme" class="hero__cta btn btn--primary">
-          Libère ton nez <span class="btn__icon">👃</span>
-        </a>
-      </div>
-      <div class="hero__scroll-indicator" aria-hidden="true">
-        <span class="hero__scroll-text">Scroll pour comprendre</span>
-        <div class="hero__scroll-arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 5v14M5 12l7 7 7-7"/>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================
-         SECTION 2 — LE PROBLÈME
-         ======================================== -->
-    <section class="section section-probleme" id="probleme">
-      <div class="section__inner">
-        <span class="section__label">01 — Le Problème</span>
-        <h2 class="section__title section__title--glitch" data-text="Houston, on a un problème de pouce.">
-          Houston, on a un problème de pouce.
-        </h2>
-        <p class="section__subtitle">
-          Ton cerveau est hacké. Et le dealer, c'est dans ta poche.
-        </p>
-
-        <div class="stats-grid">
-          <div class="stat-card" data-animate="fade-up">
-            <span class="stat-card__number" data-count="4.7">0</span>
-            <span class="stat-card__unit">heures/jour</span>
-            <p class="stat-card__label">
-              <!-- TODO: Vérifier la stat exacte et la source -->
-              <span class="placeholder">[PLACEHOLDER : Temps d'écran moyen des 13-18 ans — source à trouver]</span>
-            </p>
-          </div>
-          <div class="stat-card" data-animate="fade-up" data-delay="0.1">
-            <span class="stat-card__number" data-count="67">0</span>
-            <span class="stat-card__unit">%</span>
-            <p class="stat-card__label">
-              <span class="placeholder">[PLACEHOLDER : % d'ados se disant "accros" à TikTok — source à trouver]</span>
-            </p>
-          </div>
-          <div class="stat-card" data-animate="fade-up" data-delay="0.2">
-            <span class="stat-card__number" data-count="300">0</span>
-            <span class="stat-card__unit">scrolls/jour</span>
-            <p class="stat-card__label">
-              <span class="placeholder">[PLACEHOLDER : Nombre moyen de scrolls quotidiens — source à trouver]</span>
-            </p>
-          </div>
-          <div class="stat-card" data-animate="fade-up" data-delay="0.3">
-            <span class="stat-card__number" data-count="95">0</span>
-            <span class="stat-card__unit">minutes</span>
-            <p class="stat-card__label">
-              <span class="placeholder">[PLACEHOLDER : Durée moyenne d'une session TikTok — source à trouver]</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="probleme__explainer" data-animate="fade-up">
-          <div class="probleme__visual">
-            <!-- TODO: Illustration téléphone/cerveau/zombie -->
-            <div class="visual-placeholder">
-              <span class="placeholder">[PLACEHOLDER : Illustration — cerveau zombifié par le scroll]</span>
-            </div>
-          </div>
-          <div class="probleme__text">
-            <p>
-              <!-- TODO: Texte définitif sur le mécanisme dopamine/scroll -->
-              <span class="placeholder">[PLACEHOLDER : Texte explicatif sur le mécanisme de la dopamine et l'addiction au scroll. Comment TikTok pirate ton cerveau avec des micro-doses de dopamine à chaque swipe. Le scroll infini comme machine à sous neurologique. 3-4 phrases percutantes.]</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================
-         SECTION 3 — LA SOLUTION / LE PRODUIT
-         ======================================== -->
-    <section class="section section-solution" id="solution">
-      <div class="section__inner">
-        <span class="section__label">02 — La Solution</span>
-        <h2 class="section__title">
-          La science a parlé.<sup class="asterisk">*</sup>
-        </h2>
-        <p class="section__subtitle">
-          PSCHITT : le premier spray nasal anti-scroll au monde.
-        </p>
-
-        <div class="steps-grid">
-          <div class="step-card" data-animate="fade-up" data-delay="0">
-            <div class="step-card__number">01</div>
-            <div class="step-card__icon">
-              <!-- TODO: Icône personnalisée -->
-              <span class="step-card__emoji">🔓</span>
-            </div>
-            <h3 class="step-card__title">Ouvre le capuchon</h3>
-            <p class="step-card__desc">Comme un pro. T'as déjà fait ça.</p>
-          </div>
-          <div class="step-card" data-animate="fade-up" data-delay="0.1">
-            <div class="step-card__number">02</div>
-            <div class="step-card__icon">
-              <span class="step-card__emoji">👃</span>
-            </div>
-            <h3 class="step-card__title">Vise la narine</h3>
-            <p class="step-card__desc">Gauche ou droite, on juge pas.</p>
-          </div>
-          <div class="step-card" data-animate="fade-up" data-delay="0.2">
-            <div class="step-card__number">03</div>
-            <div class="step-card__icon">
-              <span class="step-card__emoji">💨</span>
-            </div>
-            <h3 class="step-card__title">Pschitt.</h3>
-            <p class="step-card__desc">Un seul suffit. Deux si t'es sur Reels aussi.</p>
-          </div>
-          <div class="step-card" data-animate="fade-up" data-delay="0.3">
-            <div class="step-card__number">04</div>
-            <div class="step-card__icon">
-              <span class="step-card__emoji">📵</span>
-            </div>
-            <h3 class="step-card__title">Pose ton tel.</h3>
-            <p class="step-card__desc">Et redécouvre le monde réel. Il est bizarre mais il est là.</p>
-          </div>
-        </div>
-
-        <div class="formula" data-animate="fade-up">
-          <h3 class="formula__title">La Formule Secrète™</h3>
-          <div class="formula__grid">
-            <div class="formula__ingredient">
-              <span class="formula__ingredient-name">
-                <!-- TODO: Nom d'ingrédient absurde -->
-                <span class="placeholder">[PLACEHOLDER : Nom ingrédient 1 — ex: "Extractum Focusium"]</span>
-              </span>
-              <p class="formula__ingredient-desc">
-                <span class="placeholder">[PLACEHOLDER : Description pseudo-scientifique absurde de l'ingrédient 1]</span>
-              </p>
-            </div>
-            <div class="formula__ingredient">
-              <span class="formula__ingredient-name">
-                <span class="placeholder">[PLACEHOLDER : Nom ingrédient 2 — ex: "Dopamine B-Gone™"]</span>
-              </span>
-              <p class="formula__ingredient-desc">
-                <span class="placeholder">[PLACEHOLDER : Description pseudo-scientifique absurde de l'ingrédient 2]</span>
-              </p>
-            </div>
-            <div class="formula__ingredient">
-              <span class="formula__ingredient-name">
-                <span class="placeholder">[PLACEHOLDER : Nom ingrédient 3 — ex: "Concentré de Touche-de-l'herbe"]</span>
-              </span>
-              <p class="formula__ingredient-desc">
-                <span class="placeholder">[PLACEHOLDER : Description pseudo-scientifique absurde de l'ingrédient 3]</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <p class="disclaimer">
-          <sup>*</sup>Aucune étude scientifique n'a été maltraitée pendant la création de ce produit. Les résultats peuvent varier selon votre niveau d'addiction et votre capacité à résister aux notifications.
-        </p>
-      </div>
-    </section>
-
-    <!-- ========================================
-         SECTION 4 — LA GAMME
-         ======================================== -->
-    <section class="section section-gamme" id="gamme">
-      <div class="section__inner">
-        <span class="section__label">03 — La Gamme</span>
-        <h2 class="section__title">Trouve ton PSCHITT.</h2>
-        <p class="section__subtitle">
-          Un spray pour chaque niveau d'addiction. Parce que le scroll, c'est pas une maladie unique.
-        </p>
-
-        <div class="products-grid">
-          <!-- Produit 1 — Original -->
-          <div class="product-card" data-animate="fade-up" data-delay="0">
-            <div class="product-card__badge">Bestseller</div>
-            <div class="product-card__visual">
-              <!-- TODO: Visuel produit -->
-              <div class="visual-placeholder visual-placeholder--product">
-                <span class="placeholder">[PLACEHOLDER : Visuel PSCHITT Original]</span>
-              </div>
-            </div>
-            <div class="product-card__info">
-              <h3 class="product-card__name">PSCHITT Original</h3>
-              <p class="product-card__desc">Le classique. Pour le scrolleur du dimanche qui commence à déraper en semaine.</p>
-              <div class="product-card__price">
-                <!-- TODO: Prix définitif -->
-                <span class="placeholder">[PLACEHOLDER : Prix — ex: 14,99€]</span>
-              </div>
-              <button class="btn btn--secondary product-card__btn" aria-label="Ajouter PSCHITT Original au panier">
-                Ajouter au panier 🛒
-              </button>
-            </div>
-          </div>
-
-          <!-- Produit 2 — Extreme -->
-          <div class="product-card" data-animate="fade-up" data-delay="0.1">
-            <div class="product-card__badge product-card__badge--hot">🔥 Intense</div>
-            <div class="product-card__visual">
-              <div class="visual-placeholder visual-placeholder--product">
-                <span class="placeholder">[PLACEHOLDER : Visuel PSCHITT Extreme]</span>
-              </div>
-            </div>
-            <div class="product-card__info">
-              <h3 class="product-card__name">PSCHITT Extreme</h3>
-              <p class="product-card__desc">Pour les cas sévères. Tu scrolles aux toilettes, dans le métro, pendant les repas. On te juge pas. On te soigne.</p>
-              <div class="product-card__price">
-                <span class="placeholder">[PLACEHOLDER : Prix — ex: 19,99€]</span>
-              </div>
-              <button class="btn btn--secondary product-card__btn" aria-label="Ajouter PSCHITT Extreme au panier">
-                Ajouter au panier 🛒
-              </button>
-            </div>
-          </div>
-
-          <!-- Produit 3 — Kids -->
-          <div class="product-card" data-animate="fade-up" data-delay="0.2">
-            <div class="product-card__badge product-card__badge--kids">👶 Adapté</div>
-            <div class="product-card__visual">
-              <div class="visual-placeholder visual-placeholder--product">
-                <span class="placeholder">[PLACEHOLDER : Visuel PSCHITT Kids]</span>
-              </div>
-            </div>
-            <div class="product-card__info">
-              <h3 class="product-card__name">PSCHITT Kids</h3>
-              <p class="product-card__desc">Formule douce pour les moins de 12 ans. Parce que oui, ils scrollent déjà. Et oui, c'est flippant.</p>
-              <div class="product-card__price">
-                <span class="placeholder">[PLACEHOLDER : Prix — ex: 12,99€]</span>
-              </div>
-              <button class="btn btn--secondary product-card__btn" aria-label="Ajouter PSCHITT Kids au panier">
-                Ajouter au panier 🛒
-              </button>
-            </div>
-          </div>
-
-          <!-- Produit 4 — Night -->
-          <div class="product-card" data-animate="fade-up" data-delay="0.3">
-            <div class="product-card__badge product-card__badge--night">🌙 Nocturne</div>
-            <div class="product-card__visual">
-              <div class="visual-placeholder visual-placeholder--product">
-                <span class="placeholder">[PLACEHOLDER : Visuel PSCHITT Night]</span>
-              </div>
-            </div>
-            <div class="product-card__info">
-              <h3 class="product-card__name">PSCHITT Night</h3>
-              <p class="product-card__desc">Spécial doomscrolling nocturne. Il est 3h du mat', t'as cours demain, et tu regardes un type cuire un steak sur un volcan.</p>
-              <div class="product-card__price">
-                <span class="placeholder">[PLACEHOLDER : Prix — ex: 17,99€]</span>
-              </div>
-              <button class="btn btn--secondary product-card__btn" aria-label="Ajouter PSCHITT Night au panier">
-                Ajouter au panier 🛒
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================
-         SECTION 5 — LA CIBLE / PERSONAS
-         ======================================== -->
-    <section class="section section-cible" id="cible">
-      <div class="section__inner">
-        <span class="section__label">04 — La Cible</span>
-        <h2 class="section__title">On les connaît par cœur.</h2>
-        <p class="section__subtitle">
-          Nos utilisateurs, on les a étudiés. Observés. Compris. (Et un peu stalkés, mais pour la science.)
-        </p>
-
-        <div class="personas-grid">
-          <!-- Persona 1 — L'ado -->
-          <div class="persona-card" data-animate="fade-up">
-            <div class="persona-card__header">
-              <div class="persona-card__avatar">
-                <!-- TODO: Photo/avatar persona -->
-                <div class="avatar-placeholder">🧑‍💻</div>
-              </div>
-              <div class="persona-card__identity">
-                <h3 class="persona-card__name">
-                  <span class="placeholder">[PLACEHOLDER : Prénom de l'ado — ex: "Léo"]</span>
-                </h3>
-                <span class="persona-card__age">
-                  <span class="placeholder">[PLACEHOLDER : Âge — ex: "16 ans"]</span>
+    <!-- ============================================
+         NAVBAR FIXE
+    ============================================= -->
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner container">
+            <a href="#hero" class="navbar__brand">
+                <img src="image/logo_OSCORP.jpeg" alt="Oscorpe" class="navbar__logo-img">
+                <span class="navbar__brand-text">
+                    <span class="navbar__brand-name">Oscorpe</span>
+                    <span class="navbar__brand-sep">|</span>
+                    <span class="navbar__product">SCROP</span>
                 </span>
-                <span class="persona-card__type">Persona principal — L'ado</span>
-              </div>
-            </div>
-            <blockquote class="persona-card__quote">
-              <!-- TODO: Citation du persona -->
-              <span class="placeholder">"[PLACEHOLDER : Citation de l'ado — ex: 'Je voulais juste regarder une vidéo. C'était il y a 3 heures.']"</span>
-            </blockquote>
-            <div class="persona-card__details">
-              <div class="persona-card__detail">
-                <h4>📱 Habitudes digitales</h4>
-                <p><span class="placeholder">[PLACEHOLDER : Habitudes — ex: 5h/jour sur TikTok, 200+ vidéos, scroll compulsif avant de dormir]</span></p>
-              </div>
-              <div class="persona-card__detail">
-                <h4>😤 Frustrations</h4>
-                <p><span class="placeholder">[PLACEHOLDER : Frustrations — ex: "Je perds du temps", "Je sais que c'est mal mais j'arrive pas à m'arrêter"]</span></p>
-              </div>
-              <div class="persona-card__detail">
-                <h4>✨ Ce que PSCHITT change</h4>
-                <p><span class="placeholder">[PLACEHOLDER : Bénéfices — ex: Reprend le contrôle, retrouve du temps, dort mieux]</span></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Persona 2 — Le parent -->
-          <div class="persona-card persona-card--parent" data-animate="fade-up" data-delay="0.2">
-            <div class="persona-card__header">
-              <div class="persona-card__avatar">
-                <div class="avatar-placeholder">👨‍👩‍👧</div>
-              </div>
-              <div class="persona-card__identity">
-                <h3 class="persona-card__name">
-                  <span class="placeholder">[PLACEHOLDER : Prénom du parent — ex: "Sophie"]</span>
-                </h3>
-                <span class="persona-card__age">
-                  <span class="placeholder">[PLACEHOLDER : Âge — ex: "44 ans"]</span>
-                </span>
-                <span class="persona-card__type">Persona secondaire — Le parent</span>
-              </div>
-            </div>
-            <blockquote class="persona-card__quote">
-              <span class="placeholder">"[PLACEHOLDER : Citation du parent — ex: 'J'ai essayé le contrôle parental. Il a contourné ça en 10 minutes.']"</span>
-            </blockquote>
-            <div class="persona-card__details">
-              <div class="persona-card__detail">
-                <h4>😰 Préoccupations</h4>
-                <p><span class="placeholder">[PLACEHOLDER : Préoccupations — ex: temps d'écran de son enfant, impact sur le sommeil et les notes]</span></p>
-              </div>
-              <div class="persona-card__detail">
-                <h4>🚫 Solutions testées (qui n'ont pas marché)</h4>
-                <p><span class="placeholder">[PLACEHOLDER : ex: contrôle parental, confiscation du téléphone, discussions]</span></p>
-              </div>
-              <div class="persona-card__detail">
-                <h4>✨ Ce que PSCHITT change</h4>
-                <p><span class="placeholder">[PLACEHOLDER : Bénéfices — ex: Solution non-conflictuelle, l'enfant gère lui-même]</span></p>
-              </div>
-            </div>
-          </div>
+            </a>
+            <nav class="navbar__nav" id="navMenu">
+                <a href="#diagnostic" class="navbar__link">Diagnostic</a>
+                <a href="#traitement" class="navbar__link">Traitement</a>
+                <a href="#gamme" class="navbar__link">Gamme</a>
+                <a href="#essai-clinique" class="navbar__link">Résultats</a>
+                <a href="#temoignages" class="navbar__link">Patients</a>
+                <a href="#business" class="navbar__link">Marché</a>
+                <a href="#storytelling" class="navbar__link">Notre histoire</a>
+                <a href="#equipe" class="navbar__link">Équipe</a>
+            </nav>
+            <button class="navbar__burger" id="burgerBtn" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- ========================================
-         SECTION 6 — BENCHMARK / LE MARCHÉ
-         ======================================== -->
-    <section class="section section-benchmark" id="benchmark">
-      <div class="section__inner">
-        <span class="section__label">05 — Le Marché</span>
-        <h2 class="section__title">Pourquoi PSCHITT &gt; le reste.</h2>
-        <p class="section__subtitle">
-          On a regardé ce qui existe. Spoiler : rien ne nous arrive à la narine.
-        </p>
-
-        <div class="benchmark-table" data-animate="fade-up">
-          <div class="benchmark-table__header">
-            <div class="benchmark-table__cell benchmark-table__cell--criteria">Critère</div>
-            <div class="benchmark-table__cell benchmark-table__cell--pschitt">PSCHITT 💛</div>
-            <div class="benchmark-table__cell">
-              <span class="placeholder">[Concurrent 1]</span>
-            </div>
-            <div class="benchmark-table__cell">
-              <span class="placeholder">[Concurrent 2]</span>
-            </div>
-            <div class="benchmark-table__cell">
-              <span class="placeholder">[Concurrent 3]</span>
-            </div>
-          </div>
-
-          <div class="benchmark-table__row" data-animate="fade-up" data-delay="0.05">
-            <div class="benchmark-table__cell benchmark-table__cell--criteria">Efficacité</div>
-            <div class="benchmark-table__cell benchmark-table__cell--pschitt">
-              <div class="benchmark-bar" data-value="95"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="40"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="55"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="30"></div>
-            </div>
-          </div>
-
-          <div class="benchmark-table__row" data-animate="fade-up" data-delay="0.1">
-            <div class="benchmark-table__cell benchmark-table__cell--criteria">Prix accessible</div>
-            <div class="benchmark-table__cell benchmark-table__cell--pschitt">
-              <div class="benchmark-bar" data-value="85"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="60"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="45"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="70"></div>
-            </div>
-          </div>
-
-          <div class="benchmark-table__row" data-animate="fade-up" data-delay="0.15">
-            <div class="benchmark-table__cell benchmark-table__cell--criteria">Facilité d'usage</div>
-            <div class="benchmark-table__cell benchmark-table__cell--pschitt">
-              <div class="benchmark-bar" data-value="100"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="50"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="65"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="35"></div>
-            </div>
-          </div>
-
-          <div class="benchmark-table__row" data-animate="fade-up" data-delay="0.2">
-            <div class="benchmark-table__cell benchmark-table__cell--criteria">Fun Factor</div>
-            <div class="benchmark-table__cell benchmark-table__cell--pschitt">
-              <div class="benchmark-bar" data-value="100"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="10"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="25"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="15"></div>
-            </div>
-          </div>
-
-          <div class="benchmark-table__row" data-animate="fade-up" data-delay="0.25">
-            <div class="benchmark-table__cell benchmark-table__cell--criteria">Innovation</div>
-            <div class="benchmark-table__cell benchmark-table__cell--pschitt">
-              <div class="benchmark-bar" data-value="100"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="30"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="50"></div>
-            </div>
-            <div class="benchmark-table__cell">
-              <div class="benchmark-bar" data-value="20"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="benchmark__opportunity" data-animate="fade-up">
-          <h3>L'opportunité de marché</h3>
-          <p>
-            <span class="placeholder">[PLACEHOLDER : Texte sur l'opportunité de marché — taille du marché du bien-être digital, croissance, besoin non adressé, positionnement unique de PSCHITT]</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================
-         SECTION 7 — BUSINESS PLAN
-         ======================================== -->
-    <section class="section section-business" id="business">
-      <div class="section__inner">
-        <span class="section__label">06 — Business Plan</span>
-        <h2 class="section__title">L'absurde, ça scale.</h2>
-        <p class="section__subtitle">
-          Derrière le délire, y'a des vrais chiffres. Et ils sont beaux.
-        </p>
-
-        <!-- Modèle économique -->
-        <div class="business__model" data-animate="fade-up">
-          <h3 class="business__section-title">Modèle économique</h3>
-          <p>
-            <span class="placeholder">[PLACEHOLDER : Description du modèle économique — D2C (Direct-to-Consumer) en ligne + retail en pharmacies/concept stores. Abonnement mensuel "PSCHITT Club" pour les cas chroniques. Éditions limitées saisonnières.]</span>
-          </p>
-        </div>
-
-        <!-- KPIs -->
-        <div class="business__kpis" data-animate="fade-up">
-          <div class="kpi-card">
-            <span class="kpi-card__label">TAM</span>
-            <span class="kpi-card__value">
-              <span class="placeholder">[PLACEHOLDER]</span>
-            </span>
-            <span class="kpi-card__desc">Total Addressable Market</span>
-          </div>
-          <div class="kpi-card">
-            <span class="kpi-card__label">SAM</span>
-            <span class="kpi-card__value">
-              <span class="placeholder">[PLACEHOLDER]</span>
-            </span>
-            <span class="kpi-card__desc">Serviceable Addressable Market</span>
-          </div>
-          <div class="kpi-card">
-            <span class="kpi-card__label">SOM</span>
-            <span class="kpi-card__value">
-              <span class="placeholder">[PLACEHOLDER]</span>
-            </span>
-            <span class="kpi-card__desc">Serviceable Obtainable Market</span>
-          </div>
-        </div>
-
-        <!-- Pricing -->
-        <div class="business__pricing" data-animate="fade-up">
-          <h3 class="business__section-title">Pricing</h3>
-          <div class="pricing-table">
-            <div class="pricing-card">
-              <h4 class="pricing-card__name">Original</h4>
-              <span class="pricing-card__price"><span class="placeholder">[XX€]</span></span>
-              <ul class="pricing-card__features">
-                <li>1 spray (30 doses)</li>
-                <li>Formule classique</li>
-                <li>Notice en langage ado</li>
-              </ul>
-            </div>
-            <div class="pricing-card pricing-card--featured">
-              <div class="pricing-card__badge">Populaire</div>
-              <h4 class="pricing-card__name">Extreme</h4>
-              <span class="pricing-card__price"><span class="placeholder">[XX€]</span></span>
-              <ul class="pricing-card__features">
-                <li>1 spray (30 doses)</li>
-                <li>Formule renforcée</li>
-                <li>Sticker "J'ai survécu"</li>
-                <li>Accès au PSCHITT Club</li>
-              </ul>
-            </div>
-            <div class="pricing-card">
-              <h4 class="pricing-card__name">Pack Famille</h4>
-              <span class="pricing-card__price"><span class="placeholder">[XX€]</span></span>
-              <ul class="pricing-card__features">
-                <li>3 sprays au choix</li>
-                <li>-20% sur le lot</li>
-                <li>Guide "Parler scroll avec son ado"</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Prévisionnel 3 ans -->
-        <div class="business__forecast" data-animate="fade-up">
-          <h3 class="business__section-title">Prévisionnel 3 ans</h3>
-          <div class="forecast-chart">
-            <div class="forecast-bar" data-year="Année 1" data-animate="grow">
-              <div class="forecast-bar__fill" data-height="30">
-                <span class="forecast-bar__value">
-                  <span class="placeholder">[PLACEHOLDER : CA Année 1]</span>
-                </span>
-              </div>
-              <span class="forecast-bar__label">Année 1<br><small>Lancement</small></span>
-            </div>
-            <div class="forecast-bar" data-year="Année 2" data-animate="grow">
-              <div class="forecast-bar__fill" data-height="60">
-                <span class="forecast-bar__value">
-                  <span class="placeholder">[PLACEHOLDER : CA Année 2]</span>
-                </span>
-              </div>
-              <span class="forecast-bar__label">Année 2<br><small>Croissance</small></span>
-            </div>
-            <div class="forecast-bar" data-year="Année 3" data-animate="grow">
-              <div class="forecast-bar__fill" data-height="100">
-                <span class="forecast-bar__value">
-                  <span class="placeholder">[PLACEHOLDER : CA Année 3]</span>
-                </span>
-              </div>
-              <span class="forecast-bar__label">Année 3<br><small>Domination</small></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Timeline de lancement -->
-        <div class="business__timeline" data-animate="fade-up">
-          <h3 class="business__section-title">Stratégie de lancement</h3>
-          <div class="timeline">
-            <div class="timeline__item">
-              <div class="timeline__marker"></div>
-              <div class="timeline__content">
-                <h4>Phase 1</h4>
-                <p><span class="placeholder">[PLACEHOLDER : Phase 1 — ex: Buzz TikTok + pré-commandes, T1 2027]</span></p>
-              </div>
-            </div>
-            <div class="timeline__item">
-              <div class="timeline__marker"></div>
-              <div class="timeline__content">
-                <h4>Phase 2</h4>
-                <p><span class="placeholder">[PLACEHOLDER : Phase 2 — ex: Lancement D2C + influenceurs, T2 2027]</span></p>
-              </div>
-            </div>
-            <div class="timeline__item">
-              <div class="timeline__marker"></div>
-              <div class="timeline__content">
-                <h4>Phase 3</h4>
-                <p><span class="placeholder">[PLACEHOLDER : Phase 3 — ex: Retail + international, T4 2027]</span></p>
-              </div>
-            </div>
-            <div class="timeline__item">
-              <div class="timeline__marker"></div>
-              <div class="timeline__content">
-                <h4>Phase 4</h4>
-                <p><span class="placeholder">[PLACEHOLDER : Phase 4 — ex: Gamme étendue + PSCHITT Club, 2028]</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================
-         SECTION 8 — STORYTELLING
-         ======================================== -->
-    <section class="section section-storytelling" id="storytelling">
-      <div class="section__inner section__inner--narrow">
-        <span class="section__label">07 — Notre Histoire</span>
-        <h2 class="section__title">Comment tout a commencé.</h2>
-
-        <div class="story" data-animate="fade-up">
-          <div class="story__chapter">
-            <p class="story__text story__text--lead">
-              <span class="placeholder">[PLACEHOLDER : Accroche du récit fondateur — ex: "Tout a commencé dans une salle de classe. Un prof parlait. Personne n'écoutait. 27 pouces glissaient en silence sur 27 écrans."]</span>
+    <!-- ============================================
+         POP-UP CONSENTEMENT INVERSÉ
+    ============================================= -->
+    <!-- TODO_CONTENT: POPUP_CONSENT -->
+    <div class="consent-popup" id="consentPopup">
+        <div class="consent-popup__box">
+            <div class="consent-popup__icon">&#128137;</div>
+            <h3 class="consent-popup__title">Information importante</h3>
+            <p class="consent-popup__text">
+                Ce site utilise <strong>0 cookie</strong>. Nous ne traquerons pas votre attention.
+                Votre dopamine restera intacte. Acceptez-vous de <strong>ne PAS être manipulé</strong> ?
             </p>
-          </div>
-
-          <div class="story__chapter" data-animate="fade-up">
-            <p class="story__text">
-              <span class="placeholder">[PLACEHOLDER : Suite du récit — le moment de révélation, l'idée absurde qui surgit, la réaction du groupe]</span>
+            <div class="consent-popup__actions">
+                <button class="btn btn--primary consent-popup__btn" id="consentAccept">Oui, libérez-moi</button>
+                <button class="btn btn--outline consent-popup__btn" id="consentRefuse">Non, rendez-moi mon algorithme</button>
+            </div>
+            <p class="consent-popup__disclaimer">
+                *Conformément à la réglementation Oscorpe en vigueur depuis 2026.
             </p>
-          </div>
-
-          <blockquote class="story__pullquote" data-animate="fade-up">
-            <p>
-              <span class="placeholder">"[PLACEHOLDER : Citation fondatrice — ex: 'Et si la solution, c'était pas dans le téléphone... mais dans le nez ?']"</span>
-            </p>
-          </blockquote>
-
-          <div class="story__chapter" data-animate="fade-up">
-            <p class="story__text">
-              <span class="placeholder">[PLACEHOLDER : La suite — comment l'idée est devenue un projet, le travail de la Brigade 21, la vision]</span>
-            </p>
-          </div>
         </div>
-
-        <div class="manifeste" data-animate="fade-up">
-          <h3 class="manifeste__title">Le Manifeste PSCHITT</h3>
-          <ol class="manifeste__list">
-            <li class="manifeste__item" data-animate="fade-up">
-              <span class="placeholder">[PLACEHOLDER : Principe 1 du manifeste]</span>
-            </li>
-            <li class="manifeste__item" data-animate="fade-up" data-delay="0.1">
-              <span class="placeholder">[PLACEHOLDER : Principe 2 du manifeste]</span>
-            </li>
-            <li class="manifeste__item" data-animate="fade-up" data-delay="0.2">
-              <span class="placeholder">[PLACEHOLDER : Principe 3 du manifeste]</span>
-            </li>
-            <li class="manifeste__item" data-animate="fade-up" data-delay="0.3">
-              <span class="placeholder">[PLACEHOLDER : Principe 4 du manifeste]</span>
-            </li>
-            <li class="manifeste__item" data-animate="fade-up" data-delay="0.4">
-              <span class="placeholder">[PLACEHOLDER : Principe 5 du manifeste]</span>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================
-         SECTION 9 — L'ÉQUIPE / BRIGADE 21
-         ======================================== -->
-    <section class="section section-equipe" id="equipe">
-      <div class="section__inner">
-        <span class="section__label">08 — L'Équipe</span>
-        <h2 class="section__title">Les cerveaux derrière le PSCHITT.</h2>
-        <p class="section__subtitle">
-          Brigade 21. Agents du désordre. Architectes de l'absurde.
-        </p>
-
-        <div class="team-grid">
-          <!-- TODO: Ajouter les vrais membres de l'équipe -->
-          <div class="team-card" data-animate="fade-up" data-delay="0">
-            <div class="team-card__photo">
-              <div class="avatar-placeholder avatar-placeholder--team">👤</div>
-            </div>
-            <div class="team-card__info">
-              <h3 class="team-card__name"><span class="placeholder">[PLACEHOLDER : Nom Membre 1]</span></h3>
-              <span class="team-card__role"><span class="placeholder">[PLACEHOLDER : Rôle]</span></span>
-              <p class="team-card__fact"><span class="placeholder">[PLACEHOLDER : Fun fact]</span></p>
-            </div>
-            <div class="team-card__stamp">BRIGADE 21</div>
-          </div>
-
-          <div class="team-card" data-animate="fade-up" data-delay="0.1">
-            <div class="team-card__photo">
-              <div class="avatar-placeholder avatar-placeholder--team">👤</div>
-            </div>
-            <div class="team-card__info">
-              <h3 class="team-card__name"><span class="placeholder">[PLACEHOLDER : Nom Membre 2]</span></h3>
-              <span class="team-card__role"><span class="placeholder">[PLACEHOLDER : Rôle]</span></span>
-              <p class="team-card__fact"><span class="placeholder">[PLACEHOLDER : Fun fact]</span></p>
-            </div>
-            <div class="team-card__stamp">BRIGADE 21</div>
-          </div>
-
-          <div class="team-card" data-animate="fade-up" data-delay="0.2">
-            <div class="team-card__photo">
-              <div class="avatar-placeholder avatar-placeholder--team">👤</div>
-            </div>
-            <div class="team-card__info">
-              <h3 class="team-card__name"><span class="placeholder">[PLACEHOLDER : Nom Membre 3]</span></h3>
-              <span class="team-card__role"><span class="placeholder">[PLACEHOLDER : Rôle]</span></span>
-              <p class="team-card__fact"><span class="placeholder">[PLACEHOLDER : Fun fact]</span></p>
-            </div>
-            <div class="team-card__stamp">BRIGADE 21</div>
-          </div>
-
-          <div class="team-card" data-animate="fade-up" data-delay="0.3">
-            <div class="team-card__photo">
-              <div class="avatar-placeholder avatar-placeholder--team">👤</div>
-            </div>
-            <div class="team-card__info">
-              <h3 class="team-card__name"><span class="placeholder">[PLACEHOLDER : Nom Membre 4]</span></h3>
-              <span class="team-card__role"><span class="placeholder">[PLACEHOLDER : Rôle]</span></span>
-              <p class="team-card__fact"><span class="placeholder">[PLACEHOLDER : Fun fact]</span></p>
-            </div>
-            <div class="team-card__stamp">BRIGADE 21</div>
-          </div>
-
-          <div class="team-card" data-animate="fade-up" data-delay="0.4">
-            <div class="team-card__photo">
-              <div class="avatar-placeholder avatar-placeholder--team">👤</div>
-            </div>
-            <div class="team-card__info">
-              <h3 class="team-card__name"><span class="placeholder">[PLACEHOLDER : Nom Membre 5]</span></h3>
-              <span class="team-card__role"><span class="placeholder">[PLACEHOLDER : Rôle]</span></span>
-              <p class="team-card__fact"><span class="placeholder">[PLACEHOLDER : Fun fact]</span></p>
-            </div>
-            <div class="team-card__stamp">BRIGADE 21</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ========================================
-       SECTION 10 — FOOTER
-       ======================================== -->
-  <footer class="footer" id="footer">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <span class="footer__logo">PSCHITT<span class="footer__logo-dot">.</span></span>
-        <p class="footer__tagline">Un pschitt et t'es libre.</p>
-      </div>
-
-      <div class="footer__links">
-        <h4 class="footer__links-title">Suivez le délire</h4>
-        <div class="footer__social">
-          <!-- Faux liens réseaux sociaux -->
-          <a href="#" class="footer__social-link" aria-label="Instagram" onclick="return false;">
-            <span>Instagram</span>
-          </a>
-          <a href="#" class="footer__social-link" aria-label="TikTok (ironique)" onclick="return false;">
-            <span>TikTok (oui, ironique)</span>
-          </a>
-          <a href="#" class="footer__social-link" aria-label="X / Twitter" onclick="return false;">
-            <span>X (ex-Twitter)</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer__credits">
-        <p class="footer__hackathon">
-          THE GLITCH — ISEFAC TALKS 2026
-        </p>
-        <p class="footer__team">
-          Brigade 21 — ISEFAC Lille
-        </p>
-        <p class="footer__disclaimer">
-          Aucun nez n'a été maltraité pendant la création de ce site. Sauf peut-être celui de Kevin.
-        </p>
-      </div>
     </div>
 
-    <div class="footer__bottom">
-      <p>© 2026 PSCHITT — Un produit 100% fictif, 100% génial.</p>
+    <!-- ============================================
+         COMPTEUR DE SCROLL FLOTTANT
+    ============================================= -->
+    <!-- TODO_CONTENT: COMPTEUR_MESSAGES -->
+    <div class="scroll-counter" id="scrollCounter">
+        <div class="scroll-counter__time" id="scrollTime">0:00</div>
+        <div class="scroll-counter__msg" id="scrollMsg">Tout va bien.</div>
+        <div class="scroll-counter__distance" id="scrollDistance">0 scrolls</div>
     </div>
-  </footer>
 
-  <!-- Scripts -->
-  <script src="js/main.js" defer></script>
+    <main>
+        <!-- ============================================
+             SECTION 1 — HERO
+        ============================================= -->
+        <section class="section section-hero" id="hero" aria-label="Accueil">
+            <div class="container">
+                <div class="section-hero__top">
+                    <img src="image/logo_OSCORP.jpeg" alt="Laboratoires Oscorpe" class="section-hero__logo">
+                    <span class="section-hero__lab">Laboratoires Oscorpe — Unité de Rééducation Cognitive — Depuis 2026</span>
+                </div>
+                <div class="section-hero__content">
+                    <h1 class="section-hero__title" data-animate="hero-title">SCROP<sup>®</sup></h1>
+                    <p class="section-hero__subtitle" data-animate="fade-up">Spray Nasal Anti-Scroll</p>
+                    <p class="section-hero__tagline" data-animate="fade-up">SCROP n'est pas un médicament,<br>c'est une arme de rééducation massive.</p>
+                    <div class="section-hero__spray" data-animate="fade-up">
+                        <div class="spray-placeholder">
+                            <div class="spray-placeholder__bottle"></div>
+                            <div class="spray-placeholder__mist"></div>
+                        </div>
+                    </div>
+                    <a href="#diagnostic" class="btn btn--primary section-hero__cta" data-animate="fade-up">Consulter la notice</a>
+                    <p class="section-hero__mention" data-animate="fade-up">Oscorpe Laboratories · Unité de Rééducation Cognitive · Depuis 2026</p>
+                </div>
+                <div class="section-hero__scroll-indicator">
+                    <span>Découvrir</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 2 — LE DIAGNOSTIC
+        ============================================= -->
+        <section class="section section-diagnostic" id="diagnostic" aria-label="Diagnostic">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Section clinique 01</span>
+                <h2 class="section__title" data-animate="fade-up">Pathologie identifiée :<br>Le syndrome du scroll infini</h2>
+                <p class="section__subtitle" data-animate="fade-up">L'écosystème numérique contemporain a radicalement redéfini les paradigmes de l'interaction sociale, de l'apprentissage et du divertissement. L'avènement des plateformes sociales basées sur le format vidéo court a engendré une mutation comportementale sans précédent, plaçant la génération Z au centre d'une crise de santé publique émergente.</p>
+
+                <div class="stat-grid" data-animate="fade-up">
+                    <div class="stat-card">
+                        <span class="stat-card__value" data-count="1.58">0</span>
+                        <span class="stat-card__unit">Md</span>
+                        <p class="stat-card__desc">Utilisateurs actifs quotidiens TikTok dans le monde</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__value" data-count="86">0</span>
+                        <span class="stat-card__unit">%</span>
+                        <p class="stat-card__desc">Des jeunes français (8-18 ans) inscrits sur un réseau social</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__value" data-count="5">0</span>
+                        <span class="stat-card__unit">h/jour</span>
+                        <p class="stat-card__desc">Temps moyen des ados sur les réseaux sociaux</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__value" data-count="107">0</span>
+                        <span class="stat-card__unit">min/jour</span>
+                        <p class="stat-card__desc">Consacrées spécifiquement aux vidéos courtes</p>
+                    </div>
+                </div>
+                <p class="section__footnote">*Source : Rapport Oscorpe 2026 — données ARCOM, TikTok France, CREDOC.</p>
+
+                <div class="diag-neuro" data-animate="fade-up">
+                    <p class="diag-neuro__text">Le comportement de défilement compulsif est régi par le circuit de la récompense du cerveau. L'algorithme de TikTok fonctionne sur le principe de la <strong>récompense aléatoire et variable</strong> — identique aux machines à sous — maintenant le cerveau dans un état d'anticipation permanente.</p>
+                    <p class="diag-neuro__text">Le cortex préfrontal, responsable des fonctions exécutives (prise de décision, planification, inhibition des impulsions), n'atteint sa pleine maturité qu'autour de 20-25 ans. Cette <strong>asymétrie développementale</strong> rend le cerveau adolescent biologiquement plus réactif aux récompenses immédiates.</p>
+                    <div class="diag-neuro__box">
+                        <p><strong>Le véritable besoin :</strong> un outil de transition capable d'apaiser le système nerveux lors des épisodes de craving et de faciliter la redirection de l'attention — c'est exactement le positionnement de SCROP.</p>
+                    </div>
+                </div>
+
+                <div class="cycle-addiction" data-animate="fade-up">
+                    <h3 class="cycle-addiction__title">Cycle d'addiction identifié</h3>
+                    <div class="cycle-addiction__loop">
+                        <div class="cycle-step">Scroll</div>
+                        <div class="cycle-arrow">&rarr;</div>
+                        <div class="cycle-step">Dopamine</div>
+                        <div class="cycle-arrow">&rarr;</div>
+                        <div class="cycle-step">Encore</div>
+                        <div class="cycle-arrow">&rarr;</div>
+                        <div class="cycle-step">Scroll</div>
+                        <div class="cycle-arrow">&rarr;</div>
+                        <div class="cycle-step cycle-step--infinite">&infin;</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 3 — LE TRAITEMENT
+        ============================================= -->
+        <section class="section section-traitement" id="traitement" aria-label="Traitement">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Section clinique 02</span>
+                <h2 class="section__title" data-animate="fade-up">Traitement recommandé : SCROP<sup>®</sup></h2>
+                <div class="traitement-intro" data-animate="fade-up">
+                    <p class="traitement-intro__text">Aujourd'hui, le scroll est devenu une prison silencieuse. Des heures, des journées entières, hypnotisées par ces écrans bleus qui avalent toute l'attention. Des adolescents accros et dépendants. Leur monde se résume à un doigt qui glisse, encore et encore.</p>
+                    <p class="traitement-intro__text">Mais Oscorpe dit <strong>STOP</strong>. Le laboratoire a créé l'impensable, l'inédit, le révolutionnaire : SCROP — le tout premier spray nasal anti-scroll TikTok.</p>
+                    <p class="traitement-intro__text">Ce spray agit directement sur les circuits de dopamine, et transforme l'envie de scroller en pulsion de vivre : lire un livre, faire du sport, créer... Le spray SCROP ne guérit pas seulement l'addiction… Il la <strong>transforme en passion saine et répétitive</strong>.</p>
+                </div>
+
+                <p class="section__subtitle" data-animate="fade-up">
+                    <span class="mono">Posologie :</span> 1 à 2 pulvérisations par narine, dès les premiers symptômes de scroll compulsif.
+                </p>
+
+                <div class="steps-timeline" data-animate="fade-up">
+                    <div class="step-card">
+                        <span class="step-card__number">01</span>
+                        <h3 class="step-card__title">Détection</h3>
+                        <p class="step-card__desc">Vous scrollez depuis trop longtemps. Votre pouce est en pilote automatique.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-card__number">02</span>
+                        <h3 class="step-card__title">Administration</h3>
+                        <p class="step-card__desc">1 à 2 pulvérisations par narine, dès les premiers symptômes de scroll compulsif.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-card__number">03</span>
+                        <h3 class="step-card__title">Action</h3>
+                        <p class="step-card__desc">La formule NöScroll™ atteint vos récepteurs olfactifs en 0.3 secondes.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-card__number">04</span>
+                        <h3 class="step-card__title">Libération</h3>
+                        <p class="step-card__desc">Vous posez votre téléphone. Le monde existe à nouveau.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 4 — LA FORMULE
+        ============================================= -->
+        <section class="section section-formule" id="formule" aria-label="Formule">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Données confidentielles</span>
+                <h2 class="section__title" data-animate="fade-up">Composition · Formule NöScroll™</h2>
+
+                <div class="ingredients-table" data-animate="fade-up">
+                    <div class="ingredients-table__header">
+                        <span>Substance active</span>
+                        <span>Dosage</span>
+                        <span>Rôle thérapeutique</span>
+                    </div>
+                    <div class="ingredient-row">
+                        <span class="ingredient-row__name">Bacopa Monnieri</span>
+                        <span class="ingredient-row__dose mono">150 mg</span>
+                        <span class="ingredient-row__role">Plante reconnue pour ses effets sur la mémoire et la concentration, déclenche des comportements orientés vers des actions concrètes.</span>
+                    </div>
+                    <div class="ingredient-row">
+                        <span class="ingredient-row__name">Scrolltox™ <span class="ingredient-row__badge">Breveté</span></span>
+                        <span class="ingredient-row__dose mono">42 mg</span>
+                        <span class="ingredient-row__role">Molécule qui neutralise les réflexes de scroll, interrompt l'addiction et permet au cerveau de réorganiser ses circuits de dopamine.</span>
+                    </div>
+                    <div class="ingredient-row">
+                        <span class="ingredient-row__name">Extrait de dopamine ciblée</span>
+                        <span class="ingredient-row__dose mono">20 mg</span>
+                        <span class="ingredient-row__role">Modulable selon les passions de l'utilisateur, redirige la motivation vers des activités spécifiques.</span>
+                    </div>
+                    <div class="ingredient-row">
+                        <span class="ingredient-row__name">L-Théanine</span>
+                        <span class="ingredient-row__dose mono">200 mg</span>
+                        <span class="ingredient-row__role">Favorise un état de relaxation sans somnolence (« calme alerte »), augmente les ondes cérébrales alpha.</span>
+                    </div>
+                    <div class="ingredient-row">
+                        <span class="ingredient-row__name">GABA</span>
+                        <span class="ingredient-row__dose mono">100 mg</span>
+                        <span class="ingredient-row__role">Neurotransmetteur inhibiteur qui abaisse l'anxiété de déconnexion et favorise le sommeil profond.</span>
+                    </div>
+                    <div class="ingredient-row">
+                        <span class="ingredient-row__name">Magnésium Bisglycinate</span>
+                        <span class="ingredient-row__dose mono">300 mg</span>
+                        <span class="ingredient-row__role">Régule la sécrétion de cortisol et soutient la plasticité synaptique.</span>
+                    </div>
+                </div>
+
+                <div class="pyramide-olfactive" data-animate="fade-up">
+                    <h3 class="pyramide-olfactive__title">Pyramide olfactive NöScroll™</h3>
+                    <div class="pyramide-olfactive__levels">
+                        <div class="pyramide-level pyramide-level--top">
+                            <span class="pyramide-level__label mono">Note de tête</span>
+                            <p class="pyramide-level__desc">Odeur sucrée et chimique type puff — capture immédiatement l'attention de l'utilisateur.</p>
+                        </div>
+                        <div class="pyramide-level pyramide-level--heart">
+                            <span class="pyramide-level__label mono">Note de cœur</span>
+                            <p class="pyramide-level__desc">Papier neuf / odeur de livre → envie de lire. Caoutchouc de salle de sport / légère transpiration propre → envie de bouger.</p>
+                        </div>
+                        <div class="pyramide-level pyramide-level--base">
+                            <span class="pyramide-level__label mono">Note de fond</span>
+                            <p class="pyramide-level__desc">Bois et menthol froid — crée une sensation de « reset mental », stabilise l'effet et ancre le comportement répétitif dans le temps.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formule-footer" data-animate="fade-up">
+                    <p class="formule-footer__brevet mono">Brevet Oscorpe N°FR-2026-NOSCROLL-42</p>
+                    <div class="formule-footer__qr">
+                        <div class="qr-placeholder">QR</div>
+                        <p class="formule-footer__qr-text">Scannez pour en savoir plus.*<br>
+                        <small>*Tu viens de scroller pour scanner un QR code. Tu as clairement besoin de SCROP.</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 5 — LA GAMME
+        ============================================= -->
+        <section class="section section-gamme" id="gamme" aria-label="Gamme">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Catalogue thérapeutique</span>
+                <h2 class="section__title" data-animate="fade-up">Nos solutions thérapeutiques</h2>
+
+                <div class="product-grid" data-animate="fade-up">
+                    <div class="product-card">
+                        <div class="product-card__badge">Lecture</div>
+                        <div class="product-card__visual"><div class="spray-icon spray-icon--classic"></div></div>
+                        <h3 class="product-card__name">SCROP LECTURE+</h3>
+                        <p class="product-card__desc">Odeur de bibliothèque, favorise la lecture intensive de plusieurs livres consécutifs.</p>
+                        <p class="product-card__posologie mono">Posologie : 2 pulv./jour</p>
+                        <div class="product-card__price">12,90 €</div>
+                        <button class="btn btn--primary product-card__cart" data-product="lecture">Ajouter au panier</button>
+                    </div>
+                    <div class="product-card product-card--featured">
+                        <div class="product-card__badge">Best-seller</div>
+                        <div class="product-card__visual"><div class="spray-icon spray-icon--intense"></div></div>
+                        <h3 class="product-card__name">SCROP SPORT MAX</h3>
+                        <p class="product-card__desc">Odeur de vestiaire, déclenche des performances physiques répétitives (pompes, course, exercices).</p>
+                        <p class="product-card__posologie mono">Posologie : 4 pulv./jour</p>
+                        <div class="product-card__price">12,90 €</div>
+                        <button class="btn btn--primary product-card__cart" data-product="sport">Ajouter au panier</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__badge">Création</div>
+                        <div class="product-card__visual"><div class="spray-icon spray-icon--night"></div></div>
+                        <h3 class="product-card__name">SCROP CRÉATIF</h3>
+                        <p class="product-card__desc">Odeur de peinture et feutres, stimule le dessin, la création et les activités artistiques compulsives.</p>
+                        <p class="product-card__posologie mono">Posologie : 2 pulv./jour</p>
+                        <div class="product-card__price">12,90 €</div>
+                        <button class="btn btn--primary product-card__cart" data-product="creatif">Ajouter au panier</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__badge">Pack</div>
+                        <div class="product-card__visual"><div class="spray-icon spray-icon--family"></div></div>
+                        <h3 class="product-card__name">Pack « Reset » Complet</h3>
+                        <p class="product-card__desc">1 LECTURE+ + 1 SPORT MAX. Parce que choisir, c'est déjà guérir à moitié.</p>
+                        <p class="product-card__posologie mono">Posologie : variable</p>
+                        <div class="product-card__price">22,90 € <span class="product-card__saving">— 2 € économisés</span></div>
+                        <button class="btn btn--primary product-card__cart" data-product="pack">Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="gamme-offers" data-animate="fade-up">
+                    <div class="gamme-offer">
+                        <span class="gamme-offer__label">Abonnement mensuel</span>
+                        <span class="gamme-offer__price mono">9,90 €/mois</span>
+                        <span class="gamme-offer__desc">1 flacon automatique chaque mois</span>
+                    </div>
+                    <div class="gamme-offer">
+                        <span class="gamme-offer__label">Durée de l'effet</span>
+                        <span class="gamme-offer__price mono">3 à 6 h</span>
+                        <span class="gamme-offer__desc">par pulvérisation — cure quotidienne recommandée</span>
+                    </div>
+                </div>
+                <p class="section__footnote">Remboursé par la Sécurité Sociale* <small>(*en cours de négociation depuis 2026)</small></p>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 6 — ESSAI CLINIQUE
+        ============================================= -->
+        <section class="section section-essai" id="essai-clinique" aria-label="Essai clinique">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Publication scientifique</span>
+                <h2 class="section__title" data-animate="fade-up">Résultats de l'essai clinique SCROP-01</h2>
+
+                <div class="essai-stats" data-animate="fade-up">
+                    <!-- TODO_CONTENT: ESSAI_STAT_1 -->
+                    <div class="essai-stat">
+                        <span class="essai-stat__value" data-count="87">0</span>
+                        <span class="essai-stat__unit">%</span>
+                        <p class="essai-stat__desc">Réduction du syndrome du pouce fantôme</p>
+                    </div>
+                    <!-- TODO_CONTENT: ESSAI_STAT_2 -->
+                    <div class="essai-stat">
+                        <span class="essai-stat__value" data-count="340">0</span>
+                        <span class="essai-stat__unit">%</span>
+                        <p class="essai-stat__desc">Hausse des contacts visuels IRL</p>
+                    </div>
+                    <!-- TODO_CONTENT: ESSAI_STAT_3 -->
+                    <div class="essai-stat">
+                        <span class="essai-stat__value" data-count="94">0</span>
+                        <span class="essai-stat__unit">%</span>
+                        <p class="essai-stat__desc">Patients ayant redécouvert l'existence du ciel</p>
+                    </div>
+                </div>
+
+                <!-- TODO_CONTENT: ESSAI_COURBE -->
+                <div class="chart-container" data-animate="fade-up">
+                    <h3 class="chart-container__title">Groupe SCROP vs Groupe Placebo — Évolution sur 30 jours</h3>
+                    <div class="chart-placeholder">
+                        <canvas id="essaiChart" width="800" height="300"></canvas>
+                    </div>
+                </div>
+
+                <!-- TODO_CONTENT: ESSAI_BADGE -->
+                <div class="essai-badge" data-animate="fade-up">
+                    <div class="essai-badge__icon">&#9745;</div>
+                    <p class="essai-badge__text">Approuvé par l'<strong>ANSM</strong>*</p>
+                    <p class="essai-badge__footnote">*Association Nasale pour le Scroll Modéré</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 7 — EFFETS INDÉSIRABLES
+        ============================================= -->
+        <section class="section section-effets" id="effets" aria-label="Effets indésirables">
+            <div class="container-full">
+                <h2 class="section__title section__title--small" data-animate="fade-up">Effets indésirables rapportés</h2>
+                <div class="marquee">
+                    <div class="marquee__inner">
+                        <span class="marquee__item">Peut provoquer une envie soudaine de lire un livre</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Risque de conversations réelles avec des êtres humains</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Certains patients ont reporté avoir regardé un coucher de soleil pendant plus de 5 minutes</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">En cas de bonheur prolongé sans WiFi, consultez votre médecin</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Peut entraîner une redécouverte de votre famille</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Des cas isolés de productivité compulsive ont été signalés</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Effet secondaire rare : sourire spontané en l'absence de notification</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Si vous ressentez l'envie de ranger votre chambre, ne paniquez pas</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <!-- Dupliqué pour boucle seamless -->
+                        <span class="marquee__item">Peut provoquer une envie soudaine de lire un livre</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Risque de conversations réelles avec des êtres humains</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Certains patients ont reporté avoir regardé un coucher de soleil pendant plus de 5 minutes</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">En cas de bonheur prolongé sans WiFi, consultez votre médecin</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Peut entraîner une redécouverte de votre famille</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Des cas isolés de productivité compulsive ont été signalés</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Effet secondaire rare : sourire spontané en l'absence de notification</span>
+                        <span class="marquee__sep">&#8226;</span>
+                        <span class="marquee__item">Si vous ressentez l'envie de ranger votre chambre, ne paniquez pas</span>
+                        <span class="marquee__sep">&#8226;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 8 — TÉMOIGNAGES PATIENTS
+        ============================================= -->
+        <section class="section section-temoignages" id="temoignages" aria-label="Témoignages">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Retours cliniques</span>
+                <h2 class="section__title" data-animate="fade-up">Témoignages de patients guéris</h2>
+
+                <div class="carousel" id="testimonialCarousel" data-animate="fade-up">
+                    <div class="carousel__track">
+                        <div class="carousel__slide">
+                            <div class="testimonial-card">
+                                <img src="image/Ninon_VANDOMME.jpeg" alt="Ninon V." class="testimonial-card__avatar testimonial-card__avatar--photo">
+                                <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                <blockquote class="testimonial-card__quote">"Avant SCROP, je ne connaissais pas la couleur des yeux de ma mère. Maintenant je sais qu'ils sont marron. Merci Oscorpe."</blockquote>
+                                <p class="testimonial-card__author">— Ninon V., 20 ans</p>
+                                <span class="testimonial-card__badge">Patient vérifié* <small>(*auto-déclaratif)</small></span>
+                            </div>
+                        </div>
+                        <div class="carousel__slide">
+                            <div class="testimonial-card">
+                                <img src="image/Tanguy_OPIGEZ.jpeg" alt="Tanguy O." class="testimonial-card__avatar testimonial-card__avatar--photo">
+                                <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                <blockquote class="testimonial-card__quote">"J'ai posé mon téléphone et j'ai découvert que j'avais un chien. Depuis 3 ans apparemment."</blockquote>
+                                <p class="testimonial-card__author">— Tanguy O., 21 ans</p>
+                                <span class="testimonial-card__badge">Patient vérifié* <small>(*auto-déclaratif)</small></span>
+                            </div>
+                        </div>
+                        <div class="carousel__slide">
+                            <div class="testimonial-card">
+                                <img src="image/Elsa_MAGNIER.jpeg" alt="Elsa M." class="testimonial-card__avatar testimonial-card__avatar--photo">
+                                <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                <blockquote class="testimonial-card__quote">"Grâce à SCROP, j'ai terminé un puzzle de 1000 pièces. Je ne savais même pas qu'on en avait un."</blockquote>
+                                <p class="testimonial-card__author">— Elsa M., 19 ans</p>
+                                <span class="testimonial-card__badge">Patient vérifié* <small>(*auto-déclaratif)</small></span>
+                            </div>
+                        </div>
+                        <div class="carousel__slide">
+                            <div class="testimonial-card">
+                                <img src="image/Eïna_HADJERAS.jpeg" alt="Eïna H." class="testimonial-card__avatar testimonial-card__avatar--photo">
+                                <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                <blockquote class="testimonial-card__quote">"Après une pulvérisation, j'ai couru 15 km sans m'arrêter. Je ne fais pas de sport habituellement."</blockquote>
+                                <p class="testimonial-card__author">— Eïna H., 20 ans</p>
+                                <span class="testimonial-card__badge">Patient vérifié* <small>(*auto-déclaratif)</small></span>
+                            </div>
+                        </div>
+                        <div class="carousel__slide">
+                            <div class="testimonial-card">
+                                <img src="image/Paul_CALLENS.jpeg" alt="Paul C." class="testimonial-card__avatar testimonial-card__avatar--photo">
+                                <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                <blockquote class="testimonial-card__quote">"SCROP m'a rendu tellement productif que mon patron a peur de moi."</blockquote>
+                                <p class="testimonial-card__author">— Paul C., 21 ans</p>
+                                <span class="testimonial-card__badge">Patient vérifié* <small>(*auto-déclaratif)</small></span>
+                            </div>
+                        </div>
+                        <div class="carousel__slide">
+                            <div class="testimonial-card">
+                                <img src="image/Capucine_GALLOUX.jpeg" alt="Capucine G." class="testimonial-card__avatar testimonial-card__avatar--photo">
+                                <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                <blockquote class="testimonial-card__quote">"J'ai lu 4 livres en une semaine. Avant je ne savais même pas où était la bibliothèque."</blockquote>
+                                <p class="testimonial-card__author">— Capucine G., 20 ans</p>
+                                <span class="testimonial-card__badge">Patient vérifié* <small>(*auto-déclaratif)</small></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel__controls">
+                        <button class="carousel__btn carousel__btn--prev" aria-label="Précédent">&larr;</button>
+                        <div class="carousel__dots" id="carouselDots"></div>
+                        <button class="carousel__btn carousel__btn--next" aria-label="Suivant">&rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 9 — DOSSIERS PATIENTS
+        ============================================= -->
+        <section class="section section-dossiers" id="dossiers" aria-label="Dossiers patients">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Données confidentielles</span>
+                <h2 class="section__title" data-animate="fade-up">Dossiers patients — Profils types</h2>
+
+                <div class="dossier-grid" data-animate="fade-up">
+                    <div class="dossier-card">
+                        <div class="dossier-card__header">
+                            <span class="dossier-card__id mono">DOSSIER N° OSC-2026-0017</span>
+                            <span class="dossier-card__status">ACTIF</span>
+                        </div>
+                        <div class="dossier-card__avatar dossier-card__avatar--enzo"></div>
+                        <div class="dossier-card__info">
+                            <div class="dossier-field"><span class="dossier-field__label">Patient</span><span class="dossier-field__value">Enzo (@Enzo_Vibes99), 17 ans, Terminale</span></div>
+                            <div class="dossier-field"><span class="dossier-field__label">Profil</span><span class="dossier-field__value">Signe distinctif : reflet bleu permanent sur les lunettes, pouce droit hyper-musclé.</span></div>
+                            <div class="dossier-field"><span class="dossier-field__label">Diagnostic</span><span class="dossier-field__value">9h42 de temps d'écran/jour. Commence sa journée par « juste 5 minutes » — 2h plus tard, encore au lit, il a raté son bus.</span></div>
+                            <div class="dossier-field"><span class="dossier-field__label">Symptômes</span><span class="dossier-field__value">Pouce fantôme, FOMO chronique, incapacité à maintenir un contact visuel de plus de 3 secondes.</span></div>
+                            <div class="dossier-field"><span class="dossier-field__label">Traitement prescrit</span><span class="dossier-field__value">SCROP SPORT MAX — 2 pulvérisations/jour</span></div>
+                            <div class="dossier-field"><span class="dossier-field__label">Pronostic</span><span class="dossier-field__value dossier-field__value--positive">Favorable</span></div>
+                            <div class="dossier-field dossier-field--insight"><span class="dossier-field__label">Message clé</span><span class="dossier-field__value dossier-field__value--quote">« Deviens le protagoniste de ta vie, arrête d'être le spectateur de celle des autres. »</span></div>
+                        </div>
+                    </div>
+                    <div class="dossier-card">
+                        <div class="dossier-card__header">
+                            <span class="dossier-card__id mono">DOSSIER N° OSC-2026-0042</span>
+                            <span class="dossier-card__status">ACTIF</span>
+                        </div>
+                        <div class="dossier-card__avatar dossier-card__avatar--lina"></div>
+                        <div class="dossier-card__info">
+                            <div class="dossier-field"><span class="dossier-field__label">Patient</span><span class="dossier-field__value">Lina, 16 ans, lycéenne (1ère)</span></div>
+                            <div class="dossier-field"><span class="dossier-field__label">Profil</span><span class="dossier-field__value">Banlieue d'une grande ville. iPhone toujours en main. Se voit comme « normale dans sa génération ».</span></div>
+                            <div class="dossier-field"><span class="dossier-field__label">Diagnostic</span><span class="dossier-field__value">3 à 5h de TikTok/jour. Lucide mais passive. Scrolle jusqu'à 1h du matin.</span></div>
+                            <div class="dossier-field"><span class="dossier-field__label">Symptômes</span><span class="dossier-field__value">Frustration chronique, fatigue mentale, perte d'estime de soi, incapacité à initier des projets.</span></div>
+                            <div class="dossier-field"><span class="dossier-field__label">Traitement prescrit</span><span class="dossier-field__value">SCROP LECTURE+ — 1 pulvérisation matin et soir</span></div>
+                            <div class="dossier-field"><span class="dossier-field__label">Pronostic</span><span class="dossier-field__value dossier-field__value--positive">Favorable — cure de 3 mois</span></div>
+                            <div class="dossier-field dossier-field--insight"><span class="dossier-field__label">Insight clé</span><span class="dossier-field__value dossier-field__value--quote">« SCROP doit être un accessoire social, pas une solution discrète. »</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 10 — FAUX FEED TIKTOK
+        ============================================= -->
+        <section class="section section-feed" id="feed" aria-label="Démonstration">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Démonstration en conditions réelles</span>
+                <h2 class="section__title" data-animate="fade-up">Expérimentez l'addiction. Puis la guérison.</h2>
+
+                <div class="phone-frame" data-animate="fade-up">
+                    <div class="phone-frame__notch"></div>
+                    <div class="phone-frame__screen" id="feedScreen">
+                        <div class="fake-feed" id="fakeFeed">
+                            <div class="fake-feed__item">
+                                <div class="fake-feed__avatar"></div>
+                                <div class="fake-feed__content">
+                                    <p class="fake-feed__user">@scrollmaster_69</p>
+                                    <p class="fake-feed__caption">POV : t'es censé dormir depuis 2h mais ton algo t'a trouvé une vidéo de chien qui apprend à faire du vélo 🐶</p>
+                                    <p class="fake-feed__tags">#FYP #viral #encore5min</p>
+                                </div>
+                                <div class="fake-feed__actions"><span>&#9825; 42.1K</span><span>&#128172; 891</span><span>&#8631; 2.3K</span></div>
+                            </div>
+                            <div class="fake-feed__item">
+                                <div class="fake-feed__avatar"></div>
+                                <div class="fake-feed__content">
+                                    <p class="fake-feed__user">@dopamine_dealer</p>
+                                    <p class="fake-feed__caption">Ma mère m'a dit « pose ton téléphone ». J'ai liké sa demande et j'ai scrollé</p>
+                                    <p class="fake-feed__tags">#addictif #relatable #maman</p>
+                                </div>
+                                <div class="fake-feed__actions"><span>&#9825; 108K</span><span>&#128172; 3.2K</span><span>&#8631; 15K</span></div>
+                            </div>
+                            <div class="fake-feed__item">
+                                <div class="fake-feed__avatar"></div>
+                                <div class="fake-feed__content">
+                                    <p class="fake-feed__user">@nuit_blanche_ofc</p>
+                                    <p class="fake-feed__caption">Il est 3h17. Mon pouce a pris le contrôle. Je ne suis plus aux commandes. Au revoir.</p>
+                                    <p class="fake-feed__tags">#3hdumat #doomscroll #aidezmoi</p>
+                                </div>
+                                <div class="fake-feed__actions"><span>&#9825; 67K</span><span>&#128172; 1.4K</span><span>&#8631; 8.9K</span></div>
+                            </div>
+                            <div class="fake-feed__item">
+                                <div class="fake-feed__avatar"></div>
+                                <div class="fake-feed__content">
+                                    <p class="fake-feed__user">@touch_grass_never</p>
+                                    <p class="fake-feed__caption">J'ai vu le même son 47 fois aujourd'hui. C'est du harcèlement algorithmique.</p>
+                                    <p class="fake-feed__tags">#fyp #algo #helpme</p>
+                                </div>
+                                <div class="fake-feed__actions"><span>&#9825; 234K</span><span>&#128172; 5.6K</span><span>&#8631; 21K</span></div>
+                            </div>
+                            <div class="fake-feed__item">
+                                <div class="fake-feed__avatar"></div>
+                                <div class="fake-feed__content">
+                                    <p class="fake-feed__user">@algorythm_slave</p>
+                                    <p class="fake-feed__caption">Mon téléphone a 12% de batterie. Je refuse de le charger pour m'arrêter. C'est mon plan de sortie.</p>
+                                    <p class="fake-feed__tags">#addiction #withdrawal #scrop</p>
+                                </div>
+                                <div class="fake-feed__actions"><span>&#9825; 89K</span><span>&#128172; 2.1K</span><span>&#8631; 11K</span></div>
+                            </div>
+                        </div>
+                        <div class="feed-spray-overlay" id="feedSprayOverlay">
+                            <p class="feed-spray-overlay__msg">Voilà ce que SCROP fait pour toi.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="section__footnote">Scrollez dans le téléphone. Nous vous préviendrons quand ça suffit.</p>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 11 — TEST D'ADDICTION
+        ============================================= -->
+        <section class="section section-quiz" id="quiz" aria-label="Auto-diagnostic">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Auto-évaluation clinique</span>
+                <h2 class="section__title" data-animate="fade-up">Auto-diagnostic — Êtes-vous atteint ?</h2>
+
+                <div class="quiz-container" id="quizContainer" data-animate="fade-up">
+                    <div class="quiz-step quiz-step--active" id="quizIntro">
+                        <p class="quiz-container__intro">Répondez honnêtement aux questions suivantes. Notre algorithme médical analysera vos réponses.</p>
+                        <button class="btn btn--primary" id="quizStart">Commencer le diagnostic</button>
+                    </div>
+
+                    <div class="quiz-progress" id="quizProgress" style="display:none;">
+                        <div class="quiz-progress__bar"><div class="quiz-progress__fill" id="quizProgressFill"></div></div>
+                        <span class="quiz-progress__text mono" id="quizProgressText">1/5</span>
+                    </div>
+
+                    <!-- TODO_CONTENT: QUIZ_Q1 à QUIZ_Q7 -->
+                    <div class="quiz-step" id="quizQ1">
+                        <p class="quiz-question">Avez-vous déjà scrollé aux toilettes pendant un dîner de famille ?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="quizQ2">Oui, régulièrement</button>
+                            <button class="quiz-option" data-next="quizQ2">Uniquement les jours en -di</button>
+                            <button class="quiz-option" data-next="quizQ2">Je suis en train de le faire</button>
+                        </div>
+                    </div>
+                    <div class="quiz-step" id="quizQ2">
+                        <p class="quiz-question">Votre pouce a-t-il déjà fait un mouvement de scroll dans votre sommeil ?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="quizQ3">Mon pouce est autonome</button>
+                            <button class="quiz-option" data-next="quizQ3">Il a son propre compte TikTok</button>
+                            <button class="quiz-option" data-next="quizQ3">Je ne dors plus</button>
+                        </div>
+                    </div>
+                    <div class="quiz-step" id="quizQ3">
+                        <p class="quiz-question">Combien de For You Page pouvez-vous citer de mémoire ?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="quizQ4">Plus que de prénoms dans ma famille</button>
+                            <button class="quiz-option" data-next="quizQ4">Je les ai toutes classées par genre</button>
+                            <button class="quiz-option" data-next="quizQ4">C'est ma seule culture générale</button>
+                        </div>
+                    </div>
+                    <div class="quiz-step" id="quizQ4">
+                        <p class="quiz-question">Avez-vous déjà raté votre arrêt de bus à cause d'une vidéo TikTok ?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="quizQ5">Oui, plusieurs fois cette semaine</button>
+                            <button class="quiz-option" data-next="quizQ5">J'ai créé un nouvel itinéraire pour scroller plus longtemps</button>
+                            <button class="quiz-option" data-next="quizQ5">Je prends le bus exprès pour scroller</button>
+                        </div>
+                    </div>
+                    <div class="quiz-step" id="quizQ5">
+                        <p class="quiz-question">Avez-vous déjà dit « encore 5 minutes » puis scrollé 2 heures ?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="quizQ6">C'est mon mode de vie</button>
+                            <button class="quiz-option" data-next="quizQ6">J'ai arrêté de compter</button>
+                            <button class="quiz-option" data-next="quizQ6">2h c'est une bonne journée</button>
+                        </div>
+                    </div>
+                    <div class="quiz-step" id="quizQ6">
+                        <p class="quiz-question">Connaissez-vous mieux les trends TikTok que votre programme scolaire ?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="quizQ7">J'ai eu 18 en culture TikTok cette année</button>
+                            <button class="quiz-option" data-next="quizQ7">Le prof m'a demandé ce que c'était le NPC trend</button>
+                            <button class="quiz-option" data-next="quizQ7">Mon cours d'histoire c'est #histoiretok</button>
+                        </div>
+                    </div>
+                    <div class="quiz-step" id="quizQ7">
+                        <p class="quiz-question">Avez-vous déjà eu mal au pouce sans savoir pourquoi ?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-next="quizResult">Mon pouce a demandé un arrêt de travail</button>
+                            <button class="quiz-option" data-next="quizResult">Il a développé une musculature asymétrique</button>
+                            <button class="quiz-option" data-next="quizResult">Mon kiné a diagnostiqué un « pouce TikTok »</button>
+                        </div>
+                    </div>
+
+                    <!-- TODO_CONTENT: QUIZ_RESULTAT -->
+                    <div class="quiz-step" id="quizResult">
+                        <div class="quiz-result">
+                            <h3 class="quiz-result__title">Diagnostic terminé</h3>
+                            <p class="quiz-result__verdict">Addiction sévère au scroll</p>
+                            <p class="quiz-result__text">Notre algorithme est formel : vous avez besoin de SCROP. Immédiatement.</p>
+                            <div class="quiz-result__prescription">
+                                <label class="quiz-result__label" for="patientName">Votre nom (pour l'ordonnance) :</label>
+                                <input type="text" id="patientName" class="quiz-result__input" placeholder="Dr. Scroll Trop">
+                                <button class="btn btn--primary" id="generatePrescription">Générer mon ordonnance</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TODO_CONTENT: QUIZ_ORDONNANCE -->
+                    <div class="quiz-step" id="quizOrdonnance" style="display:none;">
+                        <div class="ordonnance" id="ordonnanceContent">
+                            <div class="ordonnance__header">
+                                <span class="ordonnance__logo">&#9678; Laboratoires Oscorpe</span>
+                                <span class="ordonnance__date mono"></span>
+                            </div>
+                            <h3 class="ordonnance__title">Prescription médicale</h3>
+                            <p class="ordonnance__patient">Patient : <strong id="ordonnancePatient"></strong></p>
+                            <div class="ordonnance__body">
+                                <p><strong>Diagnostic :</strong> Addiction sévère au scroll — Stade terminal</p>
+                                <p><strong>Traitement :</strong> SCROP Intense — 4 pulvérisations/jour</p>
+                                <p><strong>Durée :</strong> Jusqu'à guérison complète ou fin d'Internet</p>
+                                <p><strong>Recommandations :</strong> Éviter tout contact avec un écran non supervisé.</p>
+                            </div>
+                            <div class="ordonnance__footer">
+                                <p class="ordonnance__stamp">&#9678; Tampon Oscorpe</p>
+                                <p class="ordonnance__ref mono">RÉF: SCROP-RX-2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 12 — BUSINESS PLAN
+        ============================================= -->
+        <section class="section section-business" id="business" aria-label="Données de marché">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Rapport confidentiel</span>
+                <h2 class="section__title" data-animate="fade-up">Données de marché — Rapport Oscorpe</h2>
+
+                <div class="biz-block" data-animate="fade-up">
+                    <h3 class="biz-block__title">Analyse concurrentielle — Marché du spray nasal</h3>
+                    <div class="benchmark-table">
+                        <table>
+                            <thead><tr><th>Marque</th><th>Positionnement</th><th>Prix</th></tr></thead>
+                            <tbody>
+                                <tr><td>Physiomer (Sanofi)</td><td>Leader patrimonial — hygiène quotidienne</td><td>4,00 € – 8,00 €</td></tr>
+                                <tr><td>ProRhinel (Novartis)</td><td>Traitement médicalisé épisodes aigus</td><td>4,99 € – 8,69 €</td></tr>
+                                <tr><td>Stérimar (Church &amp; Dwight)</td><td>Expertise clinique oligo-éléments</td><td>6,99 € – 8,02 €</td></tr>
+                                <tr><td>Humer (Urgo)</td><td>Naturalité et synergie botanique</td><td>5,99 € – 8,00 €</td></tr>
+                                <tr><td>Puressentiel / Phytosun</td><td>Aromathérapie premium HE bio</td><td>5,89 € – 10,92 €</td></tr>
+                                <tr class="benchmark-table__highlight-row"><td><strong>SCROP (Oscorpe)</strong></td><td><strong>Spray neuro-cognitif anti-scroll</strong></td><td><strong>12,90 € – 22,90 €</strong></td></tr>
+                            </tbody>
+                        </table>
+                        <div class="benchmark-whitespace">
+                            <p><strong>White Space identifié :</strong> Il n'existe aujourd'hui aucun spray nasal se positionnant sur la gestion comportementale, l'humeur ou l'optimisation cognitive en France. SCROP crée une catégorie inédite : le <strong>soin nasal neuro-cognitif</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="biz-block" data-animate="fade-up">
+                    <h3 class="biz-block__title">Indicateurs de marché</h3>
+                    <div class="kpi-grid">
+                        <div class="kpi-card"><span class="kpi-card__label">TAM</span><span class="kpi-card__value mono">21,4 M</span><span class="kpi-card__desc">Utilisateurs TikTok mensuels en France</span></div>
+                        <div class="kpi-card"><span class="kpi-card__label">SAM</span><span class="kpi-card__value mono">6,2 M</span><span class="kpi-card__desc">Ados 13-18 ans sur réseaux sociaux en France</span></div>
+                        <div class="kpi-card"><span class="kpi-card__label">SOM</span><span class="kpi-card__value mono">150 K</span><span class="kpi-card__desc">Objectif cible à 3 ans — Année 2028</span></div>
+                    </div>
+                </div>
+
+                <div class="biz-block" data-animate="fade-up">
+                    <h3 class="biz-block__title">Grille tarifaire</h3>
+                    <div class="pricing-table">
+                        <table>
+                            <thead><tr><th>Produit</th><th>Prix unitaire</th><th>Abonnement</th></tr></thead>
+                            <tbody>
+                                <tr><td>SCROP LECTURE+</td><td class="mono">12,90 €</td><td class="mono">9,90 €/mois</td></tr>
+                                <tr><td>SCROP SPORT MAX</td><td class="mono">12,90 €</td><td class="mono">9,90 €/mois</td></tr>
+                                <tr><td>SCROP CRÉATIF</td><td class="mono">12,90 €</td><td class="mono">9,90 €/mois</td></tr>
+                                <tr><td>Pack « Reset » Complet</td><td class="mono">22,90 €</td><td class="mono">—</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="section__footnote">Prix de cession laboratoire-distributeur : 8,00 €/unité</p>
+                    </div>
+                </div>
+
+                <div class="biz-block" data-animate="fade-up">
+                    <h3 class="biz-block__title">Prévisionnel financier — 3 ans</h3>
+                    <div class="previsionnel-table">
+                        <table>
+                            <thead><tr><th>Année</th><th>Unités vendues</th><th>CA</th><th>Coûts</th><th>Résultat net</th></tr></thead>
+                            <tbody>
+                                <tr><td class="mono">2026</td><td class="mono">20 000</td><td class="mono">160 000 €</td><td class="mono">150 000 €</td><td class="mono previsionnel-table__pos">+ 10 000 €</td></tr>
+                                <tr><td class="mono">2027</td><td class="mono">60 000</td><td class="mono">480 000 €</td><td class="mono">390 000 €</td><td class="mono previsionnel-table__pos">+ 90 000 €</td></tr>
+                                <tr><td class="mono">2028</td><td class="mono">150 000</td><td class="mono">1 200 000 €</td><td class="mono">900 000 €</td><td class="mono previsionnel-table__pos">+ 300 000 €</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chart-container" data-animate="fade-up">
+                        <canvas id="previsionChart" width="800" height="250"></canvas>
+                    </div>
+                </div>
+
+                <div class="biz-block" data-animate="fade-up">
+                    <h3 class="biz-block__title">Stratégie de lancement</h3>
+                    <div class="timeline">
+                        <div class="timeline__item"><span class="timeline__date mono">T1 2026</span><p class="timeline__text">Lancement officiel en pharmacies indépendantes et vente en ligne directe. Activation influence micro-créateurs santé.</p></div>
+                        <div class="timeline__item"><span class="timeline__date mono">T2 2026</span><p class="timeline__text">Déploiement grandes surfaces spécialisées (Fnac, Cultura). Campagne presse médicale absurde. Partenariat avec médecins scolaires fictifs.</p></div>
+                        <div class="timeline__item"><span class="timeline__date mono">T1 2027</span><p class="timeline__text">Distribution nationale. Lancement campagne TV (format pub pharma). Dépôt de remboursement Sécu.</p></div>
+                        <div class="timeline__item"><span class="timeline__date mono">T1 2028</span><p class="timeline__text">Expansion internationale : Belgique, Suisse, Canada francophone. Gamme SCROP PRO pour établissements scolaires.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 13 — STORYTELLING
+        ============================================= -->
+        <section class="section section-storytelling" id="storytelling" aria-label="Notre histoire">
+            <div class="container container--narrow">
+                <span class="section__label" data-animate="fade-up">Archives Oscorpe</span>
+                <h2 class="section__title" data-animate="fade-up">Genèse · Comment SCROP est né</h2>
+
+                <div class="story-content" data-animate="fade-up">
+                    <p class="story-content__text">Léa a 15 ans. Chaque soir, sa mère frappe à sa porte. Pas de réponse. Juste cette lumière bleutée sous la porte, et des bouts de musique qui passent très vite, sans jamais s'arrêter.</p>
+                    <p class="story-content__text">Mais maintenant, elle ne s'endort plus sans scroller. Elle ne mange plus sans scroller. Elle ne vit plus sans scroller. Son monde s'est réduit à l'écran de son téléphone — un petit rectangle qui prend toute la place : ses rêves, ses amis, son futur.</p>
+                    <p class="story-content__text">Au début, elle se disait que c'était normal. Que tout le monde faisait pareil. Mais là… Léa commence à se poser des questions : pourquoi est-elle toujours fatiguée ? Pourquoi n'a-t-elle plus envie de rien ? Pourquoi a-t-elle l'impression de passer à côté de sa propre vie ?</p>
+                    <p class="story-content__text">C'est là qu'elle découvre SCROP, le spray nasal anti-scroll du laboratoire Oscorpe. Au début, elle hésite. Un spray pour arrêter de scroller ? Ça semble fou. Mais elle est prête à tout pour retrouver une vie normale.</p>
+                    <p class="story-content__text">Quelques secondes après l'avoir utilisé, quelque chose change. Son téléphone reste posé. Son cerveau se réveille. L'envie de scroller se transforme en envie de lire, de dessiner, de sortir… de <strong>VIVRE</strong>.</p>
+                    <p class="story-content__text">Avec SCROP, Léa ne se contente plus de survivre derrière un écran. Elle reprend sa vie en main.</p>
+                    <blockquote class="story-content__quote">"Si le problème est chimique, la solution doit l'être aussi." — Laboratoires Oscorpe, Lille, 2026</blockquote>
+                </div>
+
+                <div class="manifeste" data-animate="fade-up">
+                    <h3 class="manifeste__title">Le Manifeste Oscorpe</h3>
+                    <ol class="manifeste__list">
+                        <li class="manifeste__item">Nous sommes nés d'un constat radical : le monde a été conçu pour capturer votre attention. Chaque pixel, chaque algorithme, chaque notification est une arme de distraction massive. Et personne ne fait rien.</li>
+                        <li class="manifeste__item">Oscorpe Laboratories a été fondé en 2026 à Lille par une conviction simple : si le problème est chimique, la solution doit l'être aussi.</li>
+                        <li class="manifeste__item">Nous ne moralisons pas. Nous n'interdisons pas. Nous rééduquons.</li>
+                        <li class="manifeste__item">Notre mission : développer des solutions physiologiques de rupture pour libérer les cerveaux captifs des boucles algorithmiques. SCROP est notre première arme. Ce ne sera pas la dernière.</li>
+                        <li class="manifeste__item">Nous ne croyons pas aux applications de « bien-être numérique » qui vous demandent de résister à la tentation depuis l'écran même qui vous emprisonne. Nous croyons à la science, au corps, et au pouvoir du nez comme porte d'entrée vers la liberté cognitive.</li>
+                    </ol>
+                    <p class="manifeste__signature mono">— Les Laboratoires Oscorpe, Lille, 2026</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 14 — L'ÉQUIPE
+        ============================================= -->
+        <section class="section section-equipe" id="equipe" aria-label="Équipe">
+            <div class="container">
+                <span class="section__label" data-animate="fade-up">Personnel autorisé</span>
+                <h2 class="section__title" data-animate="fade-up">L'équipe de recherche Oscorpe</h2>
+
+                <div class="team-grid" data-animate="fade-up">
+                    <div class="team-card">
+                        <img src="image/Mattéo_VINCENT.jpeg" alt="Dr. Mattéo VINCENT" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Dr. Mattéo VINCENT</h3>
+                        <p class="team-card__role">PDG · Directeur Général de la Rééducation</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="image/Anaïs_PIVETEAU.jpeg" alt="Dr. Anaïs PIVETEAU" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Dr. Anaïs PIVETEAU</h3>
+                        <p class="team-card__role">Directrice de la Communication Nasale</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="image/Josephine_DUTRIAUX.jpeg" alt="Dr. Joséphine DUTRIAUX" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Dr. Joséphine DUTRIAUX</h3>
+                        <p class="team-card__role">Cheffe du Département Chimie Anti-Dopamine</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="image/Haythem_MOUNY.jpeg" alt="Dr. Haythem MOUNY" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Dr. Haythem MOUNY</h3>
+                        <p class="team-card__role">Responsable Essais Cliniques &amp; Cobaye Principal</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="image/Capucine_GALLOUX.jpeg" alt="Dr. Capucine GALLOUX" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Dr. Capucine GALLOUX</h3>
+                        <p class="team-card__role">Ingénieure en Formulation Olfactive</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="image/Tanguy_OPIGEZ.jpeg" alt="Agent Tanguy OPIGEZ" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Agent Tanguy OPIGEZ</h3>
+                        <p class="team-card__role">Chef des Opérations de Terrain (Kidnapping)</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="image/Avril_VAN_QUICKELBORNE.jpeg" alt="Agent Avril VAN QUICKELBORNE" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Agent Avril VAN QUICKELBORNE</h3>
+                        <p class="team-card__role">Coordinatrice d'Extraction de Sujets</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="image/Paul_CALLENS.jpeg" alt="Agent Paul CALLENS" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Agent Paul CALLENS</h3>
+                        <p class="team-card__role">Spécialiste Infiltration &amp; Benchmark</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="image/Ninon_VANDOMME.jpeg" alt="Sujet Ninon VANDOMME" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Sujet Ninon VANDOMME</h3>
+                        <p class="team-card__role">Patiente Témoin #1 — En Rémission</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="image/Elsa_MAGNIER.jpeg" alt="Sujet Elsa MAGNIER" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Sujet Elsa MAGNIER</h3>
+                        <p class="team-card__role">Patiente Témoin #2 — Guérison Confirmée</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="image/Eïna_HADJERAS.jpeg" alt="Sujet Eïna HADJERAS" class="team-card__photo team-card__photo--img">
+                        <h3 class="team-card__name">Sujet Eïna HADJERAS</h3>
+                        <p class="team-card__role">Patiente Témoin #3 — Hyper-Réceptive</p>
+                    </div>
+                </div>
+                <p class="section__footnote">Brigade 21 — ISEFAC TALKS 2026</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         SECTION 15 — FOOTER
+    ============================================= -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__brand">
+                <img src="image/logo_OSCORP.jpeg" alt="Oscorpe" class="footer__logo-img">
+                <p class="footer__lab">Laboratoires Oscorpe · Depuis 2026 · Lille, France</p>
+            </div>
+            <p class="footer__disclaimer">
+                SCROP® est un dispositif de libération attentionnelle. Lire attentivement la notice.
+                Demandez conseil à votre pharmacien ou à votre grand-mère.
+            </p>
+            <div class="footer__links">
+                <a href="#" class="footer__link">Mentions légales</a>
+                <a href="#" class="footer__link">Politique de non-cookies</a>
+                <a href="#" class="footer__link">Nous ne recrutons pas (on a déjà un stagiaire)</a>
+            </div>
+            <div class="footer__socials">
+                <a href="#" class="footer__social" aria-label="Facebook">[fb]</a>
+                <a href="#" class="footer__social" aria-label="Instagram">[ig]</a>
+                <a href="#" class="footer__social" aria-label="TikTok">[tk]</a>
+                <a href="#" class="footer__social" aria-label="LinkedIn">[in]</a>
+            </div>
+            <div class="footer__credits-block">
+                <p class="footer__credits">Brigade 21 — THE GLITCH — ISEFAC TALKS 2026</p>
+                <img src="image/logo_ISEFAC.jpg" alt="ISEFAC" class="footer__isefac-logo">
+            </div>
+        </div>
+        <button class="rechute-btn" id="rechuteBtn" aria-label="Mode rechute">J'ai rechuté</button>
+    </footer>
+
+    <!-- Overlay mode rechute -->
+    <div class="rechute-overlay" id="rechuteOverlay"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
