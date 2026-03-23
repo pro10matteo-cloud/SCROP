@@ -511,12 +511,15 @@ function initQuiz() {
     });
   }
 
-  // Téléchargement ordonnance
+  // Téléchargement ordonnance en PDF
   const downloadBtn = document.getElementById('downloadPrescription');
   if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
       const content = document.getElementById('ordonnanceContent');
-      if (!content || typeof html2canvas === 'undefined') return;
+      if (!content || typeof html2canvas === 'undefined' || typeof window.jspdf === 'undefined') {
+        alert('Erreur : librairies PDF non chargées. Vérifiez votre connexion.');
+        return;
+      }
 
       downloadBtn.textContent = 'Génération en cours...';
       downloadBtn.disabled = true;
@@ -524,15 +527,28 @@ function initQuiz() {
       html2canvas(content, {
         scale: 2,
         backgroundColor: '#ffffff',
-        useCORS: true
+        useCORS: true,
+        logging: false
       }).then(canvas => {
-        const link = document.createElement('a');
-        const patientName = document.getElementById('ordonnancePatient').textContent || 'patient';
-        link.download = `ordonnance-scrop-${patientName.replace(/\s+/g, '-').toLowerCase()}.png`;
-        link.href = canvas.toDataURL('image/png');
-        link.click();
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
 
-        downloadBtn.textContent = '⬇ Télécharger mon ordonnance';
+        const pageW = pdf.internal.pageSize.getWidth();
+        const pageH = pdf.internal.pageSize.getHeight();
+        const margin = 15;
+        const imgW = pageW - margin * 2;
+        const imgH = (canvas.height * imgW) / canvas.width;
+        const yOffset = Math.max(margin, (pageH - imgH) / 2);
+
+        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', margin, yOffset, imgW, imgH);
+
+        const patientName = document.getElementById('ordonnancePatient').textContent || 'patient';
+        pdf.save(`ordonnance-scrop-${patientName.replace(/\s+/g, '-').toLowerCase()}.pdf`);
+
+        downloadBtn.textContent = '⬇ Télécharger mon ordonnance (PDF)';
+        downloadBtn.disabled = false;
+      }).catch(() => {
+        downloadBtn.textContent = '⬇ Télécharger mon ordonnance (PDF)';
         downloadBtn.disabled = false;
       });
     });
