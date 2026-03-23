@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuiz();
   initEssaiChart();
   initRechuteMode();
+  initHeroQrCode();
 });
 
 /* =============================================
@@ -691,6 +692,25 @@ function initRechuteMode() {
         overlay.innerHTML = '';
       }, 1800);
     }, 3000);
+  });
+}
+
+/* =============================================
+   QR CODE HERO — Lien vers le quiz ordonnance
+   ============================================= */
+function initHeroQrCode() {
+  const el = document.getElementById('heroQrCode');
+  if (!el || typeof QRCode === 'undefined') return;
+
+  const url = window.location.origin + window.location.pathname + '#quiz';
+
+  new QRCode(el, {
+    text: url,
+    width: 96,
+    height: 96,
+    colorDark: '#1E56A0',
+    colorLight: '#FFFFFF',
+    correctLevel: QRCode.CorrectLevel.M
   });
 }
 

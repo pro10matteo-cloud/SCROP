@@ -645,6 +645,36 @@ sup {
   font-style: italic;
 }
 
+.hero-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-qr > div {
+  padding: 8px;
+  background: #fff;
+  border: 1px solid var(--color-gray-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30,86,160,0.1);
+}
+
+.hero-qr img {
+  display: block;
+}
+
+.hero-qr__label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  opacity: 0.7;
+  text-align: center;
+  line-height: 1.5;
+}
+
 .section-hero__scroll-indicator {
   margin-top: var(--space-xl);
   display: flex;
