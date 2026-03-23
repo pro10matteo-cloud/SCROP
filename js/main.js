@@ -578,7 +578,7 @@ function initEssaiChart() {
   function drawChart() {
     ctx.clearRect(0, 0, w, h);
 
-    const padL = 60, padR = 30, padT = 30, padB = 50;
+    const padL = 60, padR = 80, padT = 30, padB = 50;
     const chartW = w - padL - padR;
     const chartH = h - padT - padB;
 
