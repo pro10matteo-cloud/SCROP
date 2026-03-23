@@ -2519,6 +2519,115 @@ sup {
   background: var(--color-gray-light);
 }
 
+/* =============================================
+   SCROLL REVEAL — IntersectionObserver
+   Tous les éléments animés au scroll (hors hero)
+   ============================================= */
+
+/* État initial — invisible */
+[data-animate],
+.section__label,
+.section__title,
+.section__subtitle,
+.stat-card,
+.step-card,
+.product-card,
+.team-card,
+.dossier-card,
+.essai-stat,
+.essai-badge,
+.biz-block,
+.timeline__item,
+.manifeste__item,
+.story-content__text,
+.story-content__quote,
+.kpi-card,
+.ingredient-row,
+.pyramide-level,
+.gamme-offer,
+.diag-neuro,
+.traitement-intro,
+.testimonial-card,
+.chart-container {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+/* Éléments déjà visibles dans le hero — ne pas masquer */
+.section-hero [data-animate],
+.section-hero .section__label,
+.section-hero .section__title,
+.section-hero .section__subtitle {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* État visible — déclenché par .is-visible */
+[data-animate].is-visible,
+.section__label.is-visible,
+.section__title.is-visible,
+.section__subtitle.is-visible,
+.stat-card.is-visible,
+.step-card.is-visible,
+.product-card.is-visible,
+.team-card.is-visible,
+.dossier-card.is-visible,
+.essai-stat.is-visible,
+.essai-badge.is-visible,
+.biz-block.is-visible,
+.timeline__item.is-visible,
+.manifeste__item.is-visible,
+.story-content__text.is-visible,
+.story-content__quote.is-visible,
+.kpi-card.is-visible,
+.ingredient-row.is-visible,
+.pyramide-level.is-visible,
+.gamme-offer.is-visible,
+.diag-neuro.is-visible,
+.traitement-intro.is-visible,
+.testimonial-card.is-visible,
+.chart-container.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Délais en cascade pour les grilles */
+.stat-card:nth-child(2) { transition-delay: 0.08s; }
+.stat-card:nth-child(3) { transition-delay: 0.16s; }
+.stat-card:nth-child(4) { transition-delay: 0.24s; }
+.step-card:nth-child(2) { transition-delay: 0.1s; }
+.step-card:nth-child(3) { transition-delay: 0.2s; }
+.step-card:nth-child(4) { transition-delay: 0.3s; }
+.product-card:nth-child(2) { transition-delay: 0.08s; }
+.product-card:nth-child(3) { transition-delay: 0.16s; }
+.product-card:nth-child(4) { transition-delay: 0.24s; }
+.team-card:nth-child(2)  { transition-delay: 0.05s; }
+.team-card:nth-child(3)  { transition-delay: 0.10s; }
+.team-card:nth-child(4)  { transition-delay: 0.15s; }
+.team-card:nth-child(5)  { transition-delay: 0.20s; }
+.team-card:nth-child(6)  { transition-delay: 0.25s; }
+.team-card:nth-child(7)  { transition-delay: 0.30s; }
+.team-card:nth-child(8)  { transition-delay: 0.35s; }
+.team-card:nth-child(9)  { transition-delay: 0.40s; }
+.team-card:nth-child(10) { transition-delay: 0.45s; }
+.team-card:nth-child(11) { transition-delay: 0.50s; }
+.kpi-card:nth-child(2)   { transition-delay: 0.1s; }
+.kpi-card:nth-child(3)   { transition-delay: 0.2s; }
+.ingredient-row:nth-child(2) { transition-delay: 0.06s; }
+.ingredient-row:nth-child(3) { transition-delay: 0.12s; }
+.ingredient-row:nth-child(4) { transition-delay: 0.18s; }
+.ingredient-row:nth-child(5) { transition-delay: 0.24s; }
+.ingredient-row:nth-child(6) { transition-delay: 0.30s; }
+.timeline__item:nth-child(2) { transition-delay: 0.1s; }
+.timeline__item:nth-child(3) { transition-delay: 0.2s; }
+.timeline__item:nth-child(4) { transition-delay: 0.3s; }
+.manifeste__item:nth-child(2) { transition-delay: 0.08s; }
+.manifeste__item:nth-child(3) { transition-delay: 0.16s; }
+.manifeste__item:nth-child(4) { transition-delay: 0.24s; }
+.manifeste__item:nth-child(5) { transition-delay: 0.32s; }
+
 /* Hero CSS animations — indépendant de GSAP */
 @keyframes heroFadeUp {
   from { opacity: 0; transform: translateY(30px); }

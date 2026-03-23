@@ -208,85 +208,49 @@ function initScrollCounter() {
 }
 
 /* =============================================
-   SCROLL ANIMATIONS — GSAP or Fallback
+   SCROLL ANIMATIONS — IntersectionObserver (100% natif, sans GSAP)
    ============================================= */
 function initScrollAnimations() {
-  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Hero is handled by CSS animations — GSAP ne touche pas au hero
-
-    // Fade-up elements (hors hero) with ScrollTrigger
-    document.querySelectorAll('[data-animate="fade-up"]').forEach(el => {
-      const delay = parseFloat(el.dataset.delay) || 0;
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
-        y: 40, opacity: 0, duration: 0.8, delay: delay, ease: 'power2.out',
-        onComplete: () => el.classList.add('gsap-animated')
-      });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
     });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-    // Section labels
-    document.querySelectorAll('.section__label').forEach(el => {
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%' },
-        x: -30, opacity: 0, duration: 0.6, ease: 'power2.out'
-      });
-    });
+  const selectors = [
+    '[data-animate]',
+    '.section__label',
+    '.section__title',
+    '.section__subtitle',
+    '.stat-card',
+    '.step-card',
+    '.product-card',
+    '.team-card',
+    '.dossier-card',
+    '.essai-stat',
+    '.essai-badge',
+    '.biz-block',
+    '.timeline__item',
+    '.manifeste__item',
+    '.story-content__text',
+    '.story-content__quote',
+    '.kpi-card',
+    '.ingredient-row',
+    '.pyramide-level',
+    '.gamme-offer',
+    '.diag-neuro',
+    '.traitement-intro',
+    '.testimonial-card',
+    '.chart-container',
+  ];
 
-    // Section titles
-    document.querySelectorAll('.section__title').forEach(el => {
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%' },
-        y: 30, opacity: 0, duration: 0.8, ease: 'power2.out', delay: 0.1
-      });
-    });
-
-    // Section subtitles
-    document.querySelectorAll('.section__subtitle').forEach(el => {
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%' },
-        y: 20, opacity: 0, duration: 0.8, ease: 'power2.out', delay: 0.2
-      });
-    });
-
-    // Story quotes
-    document.querySelectorAll('.story-content__quote').forEach(el => {
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 80%' },
-        scale: 0.9, opacity: 0, duration: 1, ease: 'power2.out'
-      });
-    });
-
-    // Timeline items
-    document.querySelectorAll('.timeline__item').forEach((el, i) => {
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%' },
-        x: -30, opacity: 0, duration: 0.6, delay: i * 0.15, ease: 'power2.out'
-      });
-    });
-
-    // Manifeste items
-    document.querySelectorAll('.manifeste__item').forEach((el, i) => {
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%' },
-        x: -20, opacity: 0, duration: 0.5, delay: i * 0.1, ease: 'power2.out'
-      });
-    });
-
-  } else {
-    // Fallback: IntersectionObserver
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
-
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-  }
+  document.querySelectorAll(selectors.join(', ')).forEach(el => {
+    if (el.closest('.section-hero')) return; // hero géré par CSS animations
+    observer.observe(el);
+  });
 }
 
 /* =============================================
