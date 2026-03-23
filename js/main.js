@@ -510,6 +510,33 @@ function initQuiz() {
       }
     });
   }
+
+  // Téléchargement ordonnance
+  const downloadBtn = document.getElementById('downloadPrescription');
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', () => {
+      const content = document.getElementById('ordonnanceContent');
+      if (!content || typeof html2canvas === 'undefined') return;
+
+      downloadBtn.textContent = 'Génération en cours...';
+      downloadBtn.disabled = true;
+
+      html2canvas(content, {
+        scale: 2,
+        backgroundColor: '#ffffff',
+        useCORS: true
+      }).then(canvas => {
+        const link = document.createElement('a');
+        const patientName = document.getElementById('ordonnancePatient').textContent || 'patient';
+        link.download = `ordonnance-scrop-${patientName.replace(/\s+/g, '-').toLowerCase()}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+
+        downloadBtn.textContent = '⬇ Télécharger mon ordonnance';
+        downloadBtn.disabled = false;
+      });
+    });
+  }
 }
 
 /* =============================================
