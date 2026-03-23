@@ -2811,3 +2811,226 @@ sup {
     gap: var(--space-xs);
   }
 }
+
+/* =============================================
+   RESPONSIVE — Refonte complète multi-écrans
+   ============================================= */
+
+/* --- Tablette paysage (≤ 1024px) --- */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* --- Tablette portrait (≤ 768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --space-3xl: 5rem;
+    --space-2xl: 3.5rem;
+    --space-xl: 2.5rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Sections */
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .section__title {
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Hero */
+  .section-hero {
+    padding-top: calc(var(--nav-height) + var(--space-lg));
+  }
+
+  .section-hero__content {
+    gap: var(--space-sm);
+  }
+
+  .section-hero__badges {
+    gap: 0.4rem;
+  }
+
+  .hero-badge {
+    font-size: 0.6rem;
+    padding: 0.3em 0.7em;
+  }
+
+  .hero-qr > div {
+    padding: 6px;
+  }
+
+  .hero-qr > div img,
+  .hero-qr > div canvas {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .section-hero__spray {
+    margin: var(--space-sm) 0;
+  }
+
+  /* Canvas charts */
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Grilles → 1 colonne */
+  .stat-grid,
+  .steps-timeline,
+  .product-grid,
+  .essai-stats,
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dossier-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Business */
+  .biz-block {
+    overflow-x: auto;
+  }
+
+  .previsionnel-table,
+  .pricing-table {
+    font-size: 0.75rem;
+  }
+
+  .previsionnel-table th,
+  .previsionnel-table td,
+  .pricing-table th,
+  .pricing-table td {
+    padding: 0.5em 0.6em;
+  }
+
+  /* Storytelling */
+  .manifeste__item {
+    padding-left: var(--space-lg);
+  }
+
+  /* Ordonnance */
+  .ordonnance {
+    padding: 1rem;
+  }
+
+  /* Chart containers */
+  .chart-container {
+    padding: var(--space-md);
+    overflow-x: auto;
+  }
+
+  /* Feed TikTok */
+  .feed-section__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Quiz */
+  .quiz-container {
+    padding: var(--space-md);
+  }
+}
+
+/* --- Mobile (≤ 480px) --- */
+@media (max-width: 480px) {
+  :root {
+    --space-2xl: 3rem;
+    --space-xl: 2rem;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  /* Hero */
+  .section-hero__badges {
+    display: none; /* trop chargé sur très petit écran */
+  }
+
+  .hero-qr {
+    display: none; /* le QR n'est pas scannable sur l'écran lui-même */
+  }
+
+  .section-hero__spray {
+    display: none;
+  }
+
+  /* Equipe */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  /* Navbar */
+  .navbar__product {
+    font-size: 1rem;
+  }
+
+  .navbar__logo-img {
+    height: 28px;
+  }
+
+  /* Sections title */
+  .section__title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  /* Business tables : scroll horizontal */
+  .benchmark-table,
+  .previsionnel-table,
+  .pricing-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Ordonnance */
+  .ordonnance {
+    padding: 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .ordonnance__title {
+    font-size: 0.85rem;
+  }
+
+  /* Feed */
+  .phone-frame {
+    width: 240px;
+  }
+
+  .phone-frame__screen {
+    height: 360px;
+  }
+}
