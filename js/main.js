@@ -578,7 +578,7 @@ function initEssaiChart() {
   function drawChart() {
     ctx.clearRect(0, 0, w, h);
 
-    const padL = 60, padR = 80, padT = 30, padB = 50;
+    const padL = 60, padR = 30, padT = 30, padB = 50;
     const chartW = w - padL - padR;
     const chartH = h - padT - padB;
 
@@ -621,12 +621,14 @@ function initEssaiChart() {
       });
       ctx.stroke();
 
-      // Label at end
-      const lastY = padT + chartH - (data[data.length - 1] / 100) * chartH;
+      // Label above the line at 75% of the chart
+      const labelIdx = Math.round(days * 0.75);
+      const labelX = padL + (chartW / days) * labelIdx;
+      const labelY = padT + chartH - (data[labelIdx] / 100) * chartH - 10;
       ctx.fillStyle = color;
-      ctx.font = 'bold 12px "Outfit", sans-serif';
-      ctx.textAlign = 'left';
-      ctx.fillText(label, w - padR + 5, lastY + 4);
+      ctx.font = 'bold 11px "Outfit", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(label, labelX, labelY);
     }
 
     // Placebo line (gray)
