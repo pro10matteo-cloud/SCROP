@@ -555,19 +555,23 @@ sup {
   margin-bottom: var(--space-sm);
 }
 
-/* Layout 2 colonnes */
+/* Layout 3 colonnes : QR | contenu centré | login */
 .section-hero__split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
+  grid-template-columns: 240px 1fr 280px;
+  gap: var(--space-md);
   align-items: center;
-  text-align: left;
 }
 
+.section-hero__left,
 .section-hero__right {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+}
+
+.section-hero__left {
+  align-items: center;
 }
 
 /* QR panel */
@@ -589,11 +593,11 @@ sup {
 }
 
 /* Responsive hero split */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .section-hero__split {
     grid-template-columns: 1fr;
-    text-align: center;
   }
+  .section-hero__left,
   .section-hero__right {
     display: none;
   }

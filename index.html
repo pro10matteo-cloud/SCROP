@@ -80,7 +80,18 @@
                     <span class="section-hero__lab">Laboratoires Oscorpe — Unité de Rééducation Cognitive — Depuis 2026</span>
                 </div>
                 <div class="section-hero__split">
-                    <!-- Colonne gauche : produit -->
+
+                    <!-- Colonne gauche : QR code -->
+                    <div class="section-hero__left hero-anim hero-anim--5">
+                        <div class="hero-qr-panel">
+                            <div class="hero-qr-panel__qr">
+                                <div id="heroQrCode"></div>
+                                <p class="hero-qr__label">Scannez pour obtenir<br>votre ordonnance SCROP™</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colonne centre : contenu principal -->
                     <div class="section-hero__content">
                         <h1 class="section-hero__title hero-anim hero-anim--2">SCROP<sup>™</sup></h1>
                         <p class="section-hero__subtitle hero-anim hero-anim--3">Spray Nasal Anti-Scroll</p>
@@ -101,19 +112,13 @@
                         <p class="section-hero__mention hero-anim hero-anim--6">Oscorpe Laboratories · Unité de Rééducation Cognitive · Depuis 2026</p>
                     </div>
 
-                    <!-- Colonne droite : QR + login patient -->
+                    <!-- Colonne droite : login patient -->
                     <div class="section-hero__right hero-anim hero-anim--5">
-                        <div class="hero-qr-panel">
-                            <div class="hero-qr-panel__qr">
-                                <div id="heroQrCode"></div>
-                                <p class="hero-qr__label">Scannez pour obtenir<br>votre ordonnance SCROP™</p>
-                            </div>
-                        </div>
                         <div class="patient-account">
                             <div class="patient-account__header">
                                 <div class="patient-account__icon">🧬</div>
-                                <h3 class="patient-account__title">Espace Patient Oscorpe</h3>
-                                <p class="patient-account__sub">Centralisez votre suivi thérapeutique et accédez à votre dossier numérique.</p>
+                                <h3 class="patient-account__title">Espace Patient</h3>
+                                <p class="patient-account__sub">Accédez à votre dossier thérapeutique Oscorpe.</p>
                             </div>
                             <div class="patient-tabs">
                                 <button class="patient-tab patient-tab--active" data-tab="login">Connexion</button>
@@ -142,18 +147,19 @@
                                 </div>
                                 <div class="patient-form__field">
                                     <label class="patient-form__label">Mot de passe</label>
-                                    <input class="patient-form__input" type="password" placeholder="Min. 8 caractères, 0 chiffre TikTok">
+                                    <input class="patient-form__input" type="password" placeholder="Min. 8 car., 0 chiffre TikTok">
                                 </div>
                                 <button type="submit" class="btn btn--primary patient-form__submit">Créer mon dossier</button>
                             </form>
                             <div class="patient-account__benefits">
                                 <p class="patient-account__benefit"><span class="patient-benefit__icon">✓</span> Suivi SCROP en temps réel</p>
-                                <p class="patient-account__benefit"><span class="patient-benefit__icon">✓</span> Alertes rechute &amp; rappels de pulvérisation</p>
-                                <p class="patient-account__benefit"><span class="patient-benefit__icon">✓</span> Dossier médical numérique certifié</p>
+                                <p class="patient-account__benefit"><span class="patient-benefit__icon">✓</span> Alertes rechute automatiques</p>
+                                <p class="patient-account__benefit"><span class="patient-benefit__icon">✓</span> Dossier médical certifié</p>
                             </div>
                             <p class="patient-account__disclaimer">*Données transmises au CPE en cas de rechute avérée.</p>
                         </div>
                     </div>
+
                 </div>
                 <div class="section-hero__scroll-indicator">
                     <span>Découvrir</span>
