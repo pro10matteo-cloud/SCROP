@@ -785,8 +785,8 @@ function initHeroQrCode() {
 
   new QRCode(el, {
     text: url,
-    width: 96,
-    height: 96,
+    width: 180,
+    height: 180,
     colorDark: '#1E56A0',
     colorLight: '#FFFFFF',
     correctLevel: QRCode.CorrectLevel.M

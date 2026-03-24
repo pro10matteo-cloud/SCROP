@@ -560,7 +560,7 @@ sup {
   display: grid;
   grid-template-columns: 240px 1fr 280px;
   gap: var(--space-md);
-  align-items: center;
+  align-items: start;
 }
 
 .section-hero__left,
@@ -650,6 +650,7 @@ sup {
 .hero-qr-panel {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .hero-qr-panel__qr {
@@ -658,10 +659,17 @@ sup {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
   background: var(--color-white);
   border: 1px solid var(--color-gray-light);
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(30,86,160,0.08);
+}
+
+#heroQrCode canvas {
+  width: 180px !important;
+  height: 180px !important;
 }
 
 /* Responsive hero split */
