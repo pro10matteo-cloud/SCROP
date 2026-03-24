@@ -586,7 +586,7 @@ sup {
 .hero-reviews__track {
   position: relative;
   width: 100%;
-  min-height: 130px;
+  min-height: 240px;
 }
 
 .hero-review {
@@ -597,8 +597,13 @@ sup {
   background: var(--color-white);
   border: 1px solid var(--color-gray-light);
   border-radius: 12px;
-  padding: 0.75rem;
+  padding: 1rem 0.875rem 0.75rem;
   box-shadow: 0 2px 12px rgba(30,86,160,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.3rem;
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 0.4s ease, transform 0.4s ease;
@@ -611,24 +616,37 @@ sup {
   pointer-events: auto;
 }
 
+.hero-review__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-blue-light);
+  margin-bottom: 0.2rem;
+}
+
 .hero-review__stars {
   color: #f59e0b;
-  font-size: 0.85rem;
-  margin-bottom: 0.35rem;
+  font-size: 0.8rem;
 }
 
 .hero-review__text {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--color-text-dark);
   line-height: 1.45;
-  margin: 0 0 0.4rem;
+  margin: 0;
   font-style: italic;
 }
 
 .hero-review__author {
-  font-size: 0.68rem;
-  color: var(--color-blue);
-  opacity: 0.7;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.hero-review__badge {
+  font-size: 0.65rem;
+  color: #38A169;
 }
 
 .hero-reviews__dots {
