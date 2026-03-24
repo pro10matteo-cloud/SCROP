@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initEssaiChart();
   initRechuteMode();
   initHeroQrCode();
+  initHeroReviews();
   initPatientAccount();
 });
 
@@ -755,6 +756,28 @@ function initPatientAccount() {
       showFeedback(registerForm, registerMessages);
     });
   }
+}
+
+/* =============================================
+   HERO REVIEWS — Tourniquet automatique
+   ============================================= */
+function initHeroReviews() {
+  const reviews = document.querySelectorAll('.hero-review');
+  const dots = document.querySelectorAll('.hero-reviews__dot');
+  if (!reviews.length) return;
+
+  let current = 0;
+
+  function goTo(index) {
+    reviews[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index % reviews.length;
+    reviews[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+  setInterval(() => goTo(current + 1), 4000);
 }
 
 /* =============================================
