@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollCounter();
   initScrollAnimations();
   initCounters();
-  initCartButtons();
+  initCart();
   initCarousel();
   initFakeFeed();
   initQuiz();
@@ -319,21 +319,164 @@ function animateCounter(el) {
 }
 
 /* =============================================
-   CART BUTTONS
+   CART — Panier complet
    ============================================= */
-function initCartButtons() {
-  document.querySelectorAll('.product-card__cart').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.add('cart-added');
-      const originalText = btn.textContent;
-      btn.textContent = 'Ajouté !';
+function initCart() {
+  // --- State ---
+  let cart = JSON.parse(localStorage.getItem('scrop_cart') || '[]');
 
-      setTimeout(() => {
-        btn.classList.remove('cart-added');
-        btn.textContent = originalText;
-      }, 2000);
+  const cartBtn     = document.getElementById('cartBtn');
+  const cartClose   = document.getElementById('cartClose');
+  const cartOverlay = document.getElementById('cartOverlay');
+  const cartDrawer  = document.getElementById('cartDrawer');
+  const cartBody    = document.getElementById('cartBody');
+  const cartFooter  = document.getElementById('cartFooter');
+  const cartCountEl = document.getElementById('cartCount');
+  const cartTotalEl = document.getElementById('cartTotal');
+  const checkoutBtn = document.getElementById('cartCheckout');
+  const checkoutMsg = document.getElementById('cartCheckoutMsg');
+
+  const checkoutMessages = [
+    'Commande transmise à notre Unité NöScroll™. Un pharmacien certifié vous contactera sous 72h. Ou jamais. On est débordés.',
+    'Traitement en cours de préparation. Nos robots en blouse blanche emballent votre SCROP avec soin et un peu d\'inquiétude.',
+    'Paiement accepté par la Sécurité Scolaire*. (*En attente de ratification. Et d\'existence.)',
+    'Votre commande a bien été reçue. Veuillez patienter. Et ne pas scroller pendant l\'attente. C\'est contradictoire.',
+  ];
+
+  function saveCart() {
+    localStorage.setItem('scrop_cart', JSON.stringify(cart));
+  }
+
+  function getTotalItems() {
+    return cart.reduce((s, i) => s + i.qty, 0);
+  }
+
+  function getTotalPrice() {
+    return cart.reduce((s, i) => s + i.price * i.qty, 0);
+  }
+
+  function updateBadge() {
+    const total = getTotalItems();
+    if (total > 0) {
+      cartCountEl.textContent = total;
+      cartCountEl.style.display = 'flex';
+    } else {
+      cartCountEl.style.display = 'none';
+    }
+  }
+
+  function renderCart() {
+    if (cart.length === 0) {
+      cartBody.innerHTML = `
+        <div class="cart-empty">
+          <div class="cart-empty__icon">🧴</div>
+          <p class="cart-empty__text">Votre panier est vide.<br>Votre addiction, elle, ne l'est pas.</p>
+        </div>`;
+      cartFooter.style.display = 'none';
+    } else {
+      cartBody.innerHTML = cart.map((item, idx) => `
+        <div class="cart-item" data-idx="${idx}">
+          <div class="cart-item__icon">🧴</div>
+          <div class="cart-item__info">
+            <p class="cart-item__name">${item.name}</p>
+            <p class="cart-item__price">${(item.price * item.qty).toFixed(2).replace('.', ',')} €</p>
+          </div>
+          <div class="cart-item__controls">
+            <button class="cart-item__qty-btn" data-idx="${idx}" data-action="minus">−</button>
+            <span class="cart-item__qty">${item.qty}</span>
+            <button class="cart-item__qty-btn" data-idx="${idx}" data-action="plus">+</button>
+            <button class="cart-item__remove" data-idx="${idx}" aria-label="Supprimer">✕</button>
+          </div>
+        </div>`).join('');
+
+      cartTotalEl.textContent = getTotalPrice().toFixed(2).replace('.', ',') + ' €';
+      cartFooter.style.display = 'block';
+
+      // Events sur les items rendus
+      cartBody.querySelectorAll('.cart-item__qty-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.dataset.idx);
+          if (btn.dataset.action === 'plus') {
+            cart[idx].qty++;
+          } else {
+            cart[idx].qty--;
+            if (cart[idx].qty <= 0) cart.splice(idx, 1);
+          }
+          saveCart(); updateBadge(); renderCart();
+        });
+      });
+      cartBody.querySelectorAll('.cart-item__remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          cart.splice(parseInt(btn.dataset.idx), 1);
+          saveCart(); updateBadge(); renderCart();
+        });
+      });
+    }
+  }
+
+  function openCart() {
+    cartDrawer.classList.add('active');
+    cartOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    renderCart();
+  }
+
+  function closeCart() {
+    cartDrawer.classList.remove('active');
+    cartOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  cartBtn.addEventListener('click', openCart);
+  cartClose.addEventListener('click', closeCart);
+  cartOverlay.addEventListener('click', closeCart);
+
+  checkoutBtn.addEventListener('click', () => {
+    const msg = checkoutMessages[Math.floor(Math.random() * checkoutMessages.length)];
+    checkoutMsg.textContent = msg;
+    checkoutMsg.style.display = 'block';
+    checkoutBtn.disabled = true;
+    checkoutBtn.textContent = 'Traitement en cours…';
+    setTimeout(() => {
+      cart = [];
+      saveCart(); updateBadge(); renderCart();
+      checkoutBtn.disabled = false;
+      checkoutBtn.textContent = 'Confirmer mon traitement →';
+      checkoutMsg.style.display = 'none';
+    }, 4000);
+  });
+
+  // --- Sélecteur de quantité sur la fiche produit ---
+  const qtyDisplay = document.getElementById('qtyScrop');
+  let currentQty = 1;
+  document.querySelectorAll('.qty-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.action === 'plus') currentQty = Math.min(currentQty + 1, 99);
+      else currentQty = Math.max(currentQty - 1, 1);
+      if (qtyDisplay) qtyDisplay.textContent = currentQty;
     });
   });
+
+  // --- Ajouter au panier ---
+  document.querySelectorAll('.product-card__cart').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name  = btn.dataset.name  || 'SCROP™ Formule 24H';
+      const price = parseFloat(btn.dataset.price) || 12.90;
+      const qty   = currentQty;
+      const existing = cart.find(i => i.name === name);
+      if (existing) existing.qty += qty;
+      else cart.push({ name, price, qty });
+      saveCart(); updateBadge();
+      // Flash feedback
+      const orig = btn.textContent;
+      btn.textContent = '✓ Ajouté !';
+      btn.disabled = true;
+      setTimeout(() => { btn.textContent = orig; btn.disabled = false; currentQty = 1; if (qtyDisplay) qtyDisplay.textContent = 1; }, 1500);
+      openCart();
+    });
+  });
+
+  updateBadge();
 }
 
 /* =============================================

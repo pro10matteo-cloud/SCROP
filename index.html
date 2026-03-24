@@ -35,6 +35,10 @@
             <button class="navbar__burger" id="burgerBtn" aria-label="Ouvrir le menu">
                 <span></span><span></span><span></span>
             </button>
+            <button class="navbar__cart-btn" id="cartBtn" aria-label="Panier">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                <span class="navbar__cart-count" id="cartCount" style="display:none">0</span>
+            </button>
         </div>
     </header>
 
@@ -435,7 +439,14 @@
                         <p class="product-card__desc">Formule unique à double action NöScroll™. Action stimulante le matin pour recentrer l'attention, action apaisante le soir pour prévenir le scrolling nocturne. Une seule solution pour une désintoxication 24h/24.</p>
                         <p class="product-card__posologie mono">Posologie : 2 pulv./matin · 1 pulv./soir</p>
                         <div class="product-card__price">12,90 €</div>
-                        <button class="btn btn--primary product-card__cart" data-product="scrop">Ajouter au panier</button>
+                        <div class="product-card__actions">
+                            <div class="qty-selector">
+                                <button class="qty-btn" data-action="minus">−</button>
+                                <span class="qty-value" id="qtyScrop">1</span>
+                                <button class="qty-btn" data-action="plus">+</button>
+                            </div>
+                            <button class="btn btn--primary product-card__cart" data-product="scrop" data-name="SCROP™ Formule 24H" data-price="12.90">Ajouter au panier</button>
+                        </div>
                     </div>
                 </div>
                 <div class="gamme-offers" data-animate="fade-up">
@@ -1125,6 +1136,27 @@
 
     <!-- Overlay mode rechute -->
     <div class="rechute-overlay" id="rechuteOverlay"></div>
+
+    <!-- PANIER TIROIR -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer__header">
+            <h2 class="cart-drawer__title">🧴 Votre traitement</h2>
+            <button class="cart-drawer__close" id="cartClose" aria-label="Fermer">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cartBody">
+            <!-- rempli par JS -->
+        </div>
+        <div class="cart-drawer__footer" id="cartFooter" style="display:none">
+            <div class="cart-total">
+                <span class="cart-total__label">Total thérapeutique</span>
+                <span class="cart-total__value mono" id="cartTotal">0,00 €</span>
+            </div>
+            <p class="cart-footer__note mono">Remboursé par la Sécurité Scolaire** <small>(**en cours de négociation)</small></p>
+            <button class="btn btn--primary cart-checkout" id="cartCheckout">Confirmer mon traitement →</button>
+            <p class="cart-checkout__feedback" id="cartCheckoutMsg" style="display:none"></p>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
