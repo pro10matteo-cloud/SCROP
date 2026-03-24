@@ -75,32 +75,85 @@
         ============================================= -->
         <section class="section section-hero" id="hero" aria-label="Accueil">
             <div class="container">
-                <div class="section-hero__top">
+                <div class="section-hero__top hero-anim hero-anim--1">
                     <img src="image/logo_OSCORP.jpeg" alt="Laboratoires Oscorpe" class="section-hero__logo">
                     <span class="section-hero__lab">Laboratoires Oscorpe — Unité de Rééducation Cognitive — Depuis 2026</span>
                 </div>
-                <div class="section-hero__content">
-                    <h1 class="section-hero__title hero-anim hero-anim--1">SCROP<sup>™</sup></h1>
-                    <p class="section-hero__subtitle hero-anim hero-anim--2">Spray Nasal Anti-Scroll</p>
-                    <p class="section-hero__tagline hero-anim hero-anim--3">SCROP n'est pas un médicament,<br>c'est une arme de rééducation massive.</p>
-                    <div class="section-hero__badges hero-anim hero-anim--4">
-                        <span class="hero-badge">Formule NöScroll™ brevetée</span>
-                        <span class="hero-badge">Testé sur 412 sujets volontaires*</span>
-                        <span class="hero-badge hero-badge--certified">✓ Approuvé Laboratoires Oscorpe</span>
-                        <span class="hero-badge">Remboursé par la Sécurité Scolaire**</span>
+                <div class="section-hero__split">
+                    <!-- Colonne gauche : produit -->
+                    <div class="section-hero__content">
+                        <h1 class="section-hero__title hero-anim hero-anim--2">SCROP<sup>™</sup></h1>
+                        <p class="section-hero__subtitle hero-anim hero-anim--3">Spray Nasal Anti-Scroll</p>
+                        <p class="section-hero__tagline hero-anim hero-anim--3">SCROP n'est pas un médicament,<br>c'est une arme de rééducation massive.</p>
+                        <div class="section-hero__badges hero-anim hero-anim--4">
+                            <span class="hero-badge">Formule NöScroll™ brevetée</span>
+                            <span class="hero-badge">Testé sur 412 sujets volontaires*</span>
+                            <span class="hero-badge hero-badge--certified">✓ Approuvé Laboratoires Oscorpe</span>
+                            <span class="hero-badge">Remboursé par la Sécurité Scolaire**</span>
+                        </div>
+                        <div class="section-hero__spray hero-anim hero-anim--5">
+                            <div class="spray-placeholder">
+                                <div class="spray-placeholder__bottle"></div>
+                                <div class="spray-placeholder__mist"></div>
+                            </div>
+                        </div>
+                        <a href="#diagnostic" class="btn btn--primary section-hero__cta hero-anim hero-anim--6">Consulter la notice</a>
+                        <p class="section-hero__mention hero-anim hero-anim--6">Oscorpe Laboratories · Unité de Rééducation Cognitive · Depuis 2026</p>
                     </div>
-                    <div class="section-hero__spray hero-anim hero-anim--5">
-                        <div class="spray-placeholder">
-                            <div class="spray-placeholder__bottle"></div>
-                            <div class="spray-placeholder__mist"></div>
+
+                    <!-- Colonne droite : QR + login patient -->
+                    <div class="section-hero__right hero-anim hero-anim--5">
+                        <div class="hero-qr-panel">
+                            <div class="hero-qr-panel__qr">
+                                <div id="heroQrCode"></div>
+                                <p class="hero-qr__label">Scannez pour obtenir<br>votre ordonnance SCROP™</p>
+                            </div>
+                        </div>
+                        <div class="patient-account">
+                            <div class="patient-account__header">
+                                <div class="patient-account__icon">🧬</div>
+                                <h3 class="patient-account__title">Espace Patient Oscorpe</h3>
+                                <p class="patient-account__sub">Centralisez votre suivi thérapeutique et accédez à votre dossier numérique.</p>
+                            </div>
+                            <div class="patient-tabs">
+                                <button class="patient-tab patient-tab--active" data-tab="login">Connexion</button>
+                                <button class="patient-tab" data-tab="register">Créer un compte</button>
+                            </div>
+                            <form class="patient-form" id="patientLoginForm">
+                                <div class="patient-form__field">
+                                    <label class="patient-form__label">Identifiant Oscorpe</label>
+                                    <input class="patient-form__input" type="email" placeholder="patient@oscorpe.fr" autocomplete="email">
+                                </div>
+                                <div class="patient-form__field">
+                                    <label class="patient-form__label">Mot de passe</label>
+                                    <input class="patient-form__input" type="password" placeholder="••••••••">
+                                </div>
+                                <button type="submit" class="btn btn--primary patient-form__submit">Se connecter</button>
+                                <p class="patient-form__forgot">Mot de passe oublié ? <a href="#" class="patient-form__link">Contactez l'Unité Nasale</a></p>
+                            </form>
+                            <form class="patient-form patient-form--hidden" id="patientRegisterForm">
+                                <div class="patient-form__field">
+                                    <label class="patient-form__label">Prénom</label>
+                                    <input class="patient-form__input" type="text" placeholder="Ex : Enzo">
+                                </div>
+                                <div class="patient-form__field">
+                                    <label class="patient-form__label">Email</label>
+                                    <input class="patient-form__input" type="email" placeholder="patient@oscorpe.fr">
+                                </div>
+                                <div class="patient-form__field">
+                                    <label class="patient-form__label">Mot de passe</label>
+                                    <input class="patient-form__input" type="password" placeholder="Min. 8 caractères, 0 chiffre TikTok">
+                                </div>
+                                <button type="submit" class="btn btn--primary patient-form__submit">Créer mon dossier</button>
+                            </form>
+                            <div class="patient-account__benefits">
+                                <p class="patient-account__benefit"><span class="patient-benefit__icon">✓</span> Suivi SCROP en temps réel</p>
+                                <p class="patient-account__benefit"><span class="patient-benefit__icon">✓</span> Alertes rechute &amp; rappels de pulvérisation</p>
+                                <p class="patient-account__benefit"><span class="patient-benefit__icon">✓</span> Dossier médical numérique certifié</p>
+                            </div>
+                            <p class="patient-account__disclaimer">*Données transmises au CPE en cas de rechute avérée.</p>
                         </div>
                     </div>
-                    <a href="#diagnostic" class="btn btn--primary section-hero__cta hero-anim hero-anim--6">Consulter la notice</a>
-                    <div class="hero-qr hero-anim hero-anim--7">
-                        <div id="heroQrCode"></div>
-                        <p class="hero-qr__label">Scannez pour obtenir<br>votre ordonnance SCROP™</p>
-                    </div>
-                    <p class="section-hero__mention hero-anim hero-anim--7">Oscorpe Laboratories · Unité de Rééducation Cognitive · Depuis 2026</p>
                 </div>
                 <div class="section-hero__scroll-indicator">
                     <span>Découvrir</span>
@@ -754,7 +807,7 @@
                             </div>
                         </div>
                         <button class="btn btn--primary ordonnance__download" id="downloadPrescription">
-                            ⬇ Télécharger mon ordonnance
+                            ⬇ Télécharger mon ordonnance (PDF)
                         </button>
                     </div>
                 </div>

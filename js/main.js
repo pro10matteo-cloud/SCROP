@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initEssaiChart();
   initRechuteMode();
   initHeroQrCode();
+  initPatientAccount();
 });
 
 /* =============================================
@@ -695,6 +696,64 @@ function initRechuteMode() {
       }, 1800);
     }, 3000);
   });
+}
+
+/* =============================================
+   ESPACE PATIENT — Tabs + Feedback absurde
+   ============================================= */
+function initPatientAccount() {
+  const tabs = document.querySelectorAll('.patient-tab');
+  const loginForm = document.getElementById('patientLoginForm');
+  const registerForm = document.getElementById('patientRegisterForm');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('patient-tab--active'));
+      tab.classList.add('patient-tab--active');
+      const target = tab.dataset.tab;
+      if (loginForm) loginForm.classList.toggle('patient-form--hidden', target !== 'login');
+      if (registerForm) registerForm.classList.toggle('patient-form--hidden', target !== 'register');
+    });
+  });
+
+  const loginMessages = [
+    'Connexion impossible — votre index est trop entraîné au scroll pour saisir un mot de passe.',
+    'Erreur 418 : Votre cerveau est encore en mode TikTok. Réessayez après 2 pulvérisations de SCROP.',
+    'Identifiant introuvable. Avez-vous vérifié votre For You Page ?',
+    'Mot de passe incorrect. Votre pouce a tremblé. Prenez votre dose.',
+  ];
+
+  const registerMessages = [
+    'Dossier créé avec succès. Votre CPE en a été informé automatiquement.',
+    'Compte en cours de validation par le Conseil de Classe. Résultat sous 4 à 6 semaines scolaires.',
+    'Inscription réussie ! Votre SCROP gratuit d\'essai est en route par voie nasale.',
+  ];
+
+  function showFeedback(form, messages) {
+    let fb = form.querySelector('.patient-form__feedback');
+    if (!fb) {
+      fb = document.createElement('p');
+      fb.className = 'patient-form__feedback patient-form__feedback--error';
+      form.appendChild(fb);
+    }
+    const msg = messages[Math.floor(Math.random() * messages.length)];
+    fb.textContent = msg;
+    fb.style.display = 'block';
+    setTimeout(() => { fb.style.display = 'none'; }, 4000);
+  }
+
+  if (loginForm) {
+    loginForm.addEventListener('submit', e => {
+      e.preventDefault();
+      showFeedback(loginForm, loginMessages);
+    });
+  }
+  if (registerForm) {
+    registerForm.addEventListener('submit', e => {
+      e.preventDefault();
+      showFeedback(registerForm, registerMessages);
+    });
+  }
 }
 
 /* =============================================
